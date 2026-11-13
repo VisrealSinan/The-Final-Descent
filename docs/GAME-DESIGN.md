@@ -18,7 +18,8 @@ This file records decisions made by Davey. Suggestions are not approved features
 - Aim and melee attack: arrow keys in the corresponding direction.
 - Movement and attack direction are independent, allowing movement one way while attacking another.
 - This replaces the earlier assistant suggestion of mouse aiming and left-click attacks.
-- These mappings are agreed design, not yet implemented gameplay. Hold-to-repeat versus individual presses, diagonal aiming, and special-ability bindings remain to be decided.
+- Holding an arrow key repeatedly performs the basic melee attack in that direction. Davey selected hold-to-repeat for ease of play; individual key presses are not required for successive attacks.
+- These mappings are agreed design, not yet implemented gameplay. Diagonal aiming and special-ability bindings remain to be decided. Repeat cadence will follow the attack timing once it is defined.
 - Visreal's basic attack is a close-range sword slash. Player attacks are melee-only; no ranged player attacks. This does not decide enemy attack types, which remain open.
 - Melee-only does not yet prescribe equal reach, damage, or attack speed; those values and special abilities remain to be designed with Davey.
 
@@ -54,8 +55,9 @@ A Druid who chooses bear form and enjoys being a caked-up bear. Davey approved t
 ## Decisions still open
 
 - Target platform and distribution method.
-- Hold/repeat behavior, diagonal aiming, and special-ability bindings; the movement/attack key groups are decided above.
+- Diagonal aiming and special-ability bindings; movement, attack key groups, and hold-to-repeat are decided above.
 - Character skills, cooldowns, resources, and numerical stats.
+- Equipment slots, item effects, acquisition, and any character-specific restrictions.
 - Enemy types, behavior, and difficulty scaling.
 - Room connections, floor layouts, and the condition for descending.
 - Specific art treatment, animation requirements, audio, and UI details.
@@ -67,3 +69,5 @@ Earlier assistant suggestions such as shadow rescue, healing purrs, an AI compan
 Davey supplies the creative direction. AI can make routine implementation decisions within agreed scope. Major unresolved design decisions and scope expansion go back to Davey. Overnight tasks must be human-defined and approved.
 
 Completed work: repository setup, character concepts, and first Godot-ready sprite packs for Visreal, Han, and Ghalrym with import resources and a shared animation preview. Davey explicitly requested Han and Ghalrym's sprite sheets after the visual revisions. This is not authorization to invent all remaining game systems.
+
+Next requested design work: skills and equipment. Basic movement, melee hit detection, and combat have not yet been implemented. A small playable combat test is the next proposed implementation milestone once the initial mechanics are defined; full dungeon and progression implementation remain later work.
