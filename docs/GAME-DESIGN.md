@@ -12,6 +12,15 @@ This file records decisions made by Davey. Suggestions are not approved features
 - Dark fantasy, World of Warcraft-inspired parody art direction.
 - Engine: Godot, selected by Davey. The first deliverable is a character asset preview, not the playable dungeon crawler.
 
+## Chosen gameplay controls
+
+- Movement: W up, A left, S down, D right.
+- Aim and attack/shoot: arrow keys in the corresponding direction.
+- Movement and attack direction are independent, allowing movement one way while attacking another.
+- This replaces the earlier assistant suggestion of mouse aiming and left-click attacks.
+- These mappings are agreed design, not yet implemented gameplay. Hold-to-repeat versus individual presses, diagonal aiming, and special-ability bindings remain to be decided.
+- The control mapping does not establish whether a particular character's basic attack is melee or ranged; confirm that behavior with Davey when defining the combat kit.
+
 ## Progression and death
 
 - Enemy kills grant XP during the run.
@@ -28,7 +37,7 @@ A gamer who is naturally a Rogue. He has a darker, self-sacrificing side and is 
 
 ### Ghalrym
 
-A Druid who chooses feline form over all other forms and rests in it. He loves AI and anime cat girls, and would do anything to help his friends and save all the cat girls in the world. Davey refined the visual direction to a catgirl druid form and requested a human face. See [Ghalrym's visual concepts](characters/GHALRYM.md). Visual review is ongoing; skills are not yet defined.
+A Druid who chooses feline form over all other forms and rests in it. He loves AI and anime cat girls, and would do anything to help his friends and save all the cat girls in the world. Davey refined the visual direction to a catgirl druid form and requested a human face. V4 is the sprite-production reference; see [Ghalrym's visual concepts](characters/GHALRYM.md). Skills are not yet defined.
 
 ### Han
 
@@ -43,7 +52,8 @@ A Druid who chooses bear form and enjoys being a caked-up bear. Davey approved t
 
 ## Decisions still open
 
-- Target platform, distribution method, and gameplay controls.
+- Target platform and distribution method.
+- Hold/repeat behavior, diagonal aiming, and special-ability bindings; the movement/attack key groups are decided above.
 - Character skills, cooldowns, resources, and numerical stats.
 - Enemy types, behavior, and difficulty scaling.
 - Room connections, floor layouts, and the condition for descending.

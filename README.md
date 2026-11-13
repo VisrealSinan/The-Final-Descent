@@ -6,7 +6,7 @@ A single-player, top-down 2D dungeon crawler with RPG elements, made for Andrew,
 
 ## How to play
 
-Gameplay launch instructions and controls will be added when the first playable dungeon build exists. The engine is Godot; the target platform remains to be decided.
+Gameplay launch instructions will be added when the first playable dungeon build exists. The engine is Godot; the target platform remains to be decided. Chosen gameplay controls are **WASD to move** and **arrow keys to aim and attack/shoot**, independently of movement. These gameplay controls are not implemented yet.
 
 To inspect the character assets now, import `project.godot` in Godot 4 and press **F5**. Press **1** for Visreal, **2** for Han, or **3** for Ghalrym. Space pauses, Right steps frames while paused, R replays, and T changes the panel backdrop. Preview controls are not final game controls. The original standalone Visreal preview remains available.
 
@@ -21,7 +21,7 @@ The agreed game loop is:
 5. Leveling increases stats for the remainder of the run.
 6. On death, use the game-over screen to return to the main menu or restart from floor one.
 
-There is no progression between runs in the initial version. Enemies, skills, stats, controls, and floor-transition details are still being designed.
+There is no progression between runs in the initial version. Enemies, skills, stats, further control behavior, and floor-transition details are still being designed.
 
 ## Design
 
