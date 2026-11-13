@@ -48,4 +48,4 @@ The first pack contains idle, walk, basic dual-sword attack, hurt, and death in 
 
 ## Skills
 
-To be defined by Davey after appearance development. No skill kit or numerical stats are approved yet.
+Davey confirmed the basic attack: close-range sword slashes directed with the arrow keys. All playable heroes are melee-only. Visreal's signature abilities, attack timing, reach, damage, resources, and numerical stats remain to be defined.

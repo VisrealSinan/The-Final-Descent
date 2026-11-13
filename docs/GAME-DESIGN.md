@@ -6,7 +6,7 @@ This file records decisions made by Davey. Suggestions are not approved features
 
 - Single-player, top-down 2D dungeon crawler with RPG elements.
 - Players select one of three heroes; the chosen hero ventures alone.
-- Direct movement and active class-based attacks or spells.
+- Direct movement and active class-based melee attacks. All three playable characters are melee-only, as chosen by Davey for fairness.
 - Survive as many floors of the void as possible; no fixed final floor has been specified.
 - Exactly five rooms per floor: an enemy-free spawn room plus four rooms containing enemies.
 - Dark fantasy, World of Warcraft-inspired parody art direction.
@@ -15,11 +15,12 @@ This file records decisions made by Davey. Suggestions are not approved features
 ## Chosen gameplay controls
 
 - Movement: W up, A left, S down, D right.
-- Aim and attack/shoot: arrow keys in the corresponding direction.
+- Aim and melee attack: arrow keys in the corresponding direction.
 - Movement and attack direction are independent, allowing movement one way while attacking another.
 - This replaces the earlier assistant suggestion of mouse aiming and left-click attacks.
 - These mappings are agreed design, not yet implemented gameplay. Hold-to-repeat versus individual presses, diagonal aiming, and special-ability bindings remain to be decided.
-- The control mapping does not establish whether a particular character's basic attack is melee or ranged; confirm that behavior with Davey when defining the combat kit.
+- Visreal's basic attack is a close-range sword slash. Player attacks are melee-only; no ranged player attacks. This does not decide enemy attack types, which remain open.
+- Melee-only does not yet prescribe equal reach, damage, or attack speed; those values and special abilities remain to be designed with Davey.
 
 ## Progression and death
 
