@@ -37,6 +37,8 @@ This file records decisions made by Davey. Suggestions are not approved features
 
 A gamer who is naturally a Rogue. He has a darker, self-sacrificing side and is prone to sneaking away to save his friends rather than himself. See [his appearance brief](characters/VISREAL.md).
 
+Davey chose shadow- and poison-powered melee as Visreal's combat direction. His dual-sword attacks remain close-range; specific abilities, poison behavior, and equipment effects are still being designed.
+
 ### Ghalrym
 
 A Druid who chooses feline form over all other forms and rests in it. He loves AI and anime cat girls, and would do anything to help his friends and save all the cat girls in the world. Davey refined the visual direction to a catgirl druid form and requested a human face. V4 is the sprite-production reference; see [Ghalrym's visual concepts](characters/GHALRYM.md). Skills are not yet defined.
