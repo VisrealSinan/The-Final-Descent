@@ -32,13 +32,13 @@ A Druid who chooses cat form over all other forms and rests in it. He loves AI a
 
 ### Han
 
-A Druid who chooses bear form and enjoys being a caked-up bear. Appearance details and skills are not yet defined.
+A Druid who chooses bear form and enjoys being a caked-up bear. Davey requested a more gnome-styled appearance. See [Han's visual proposals](characters/HAN.md). Skills are not yet defined.
 
 ## Design sequence
 
-1. Define Visreal's appearance, then his skills.
-2. Define Ghalrym's appearance and skills.
-3. Define Han's appearance and skills.
+1. Visreal's appearance and initial Godot sprite pack are approved.
+2. Current focus, at Davey's request: Han's visuals, with a gnome-styled bear direction.
+3. Ghalrym's visuals and all character skill kits remain to be defined with Davey.
 4. Refine each character's gameplay after appearance and skills are settled.
 
 ## Decisions still open
@@ -55,4 +55,4 @@ Earlier assistant suggestions such as shadow rescue, healing purrs, an AI compan
 
 Davey supplies the creative direction. AI can make routine implementation decisions within agreed scope. Major unresolved design decisions and scope expansion go back to Davey. Overnight tasks must be human-defined and approved.
 
-Current agreed work: repository setup, recording these decisions, and preparing Godot-ready Visreal sprite sheets based on Davey's approved v3 appearance. Package the sheets with import resources and an animation preview. This is not authorization to invent all remaining game systems.
+Completed work: repository setup and a Godot-ready Visreal sprite pack with import resources and animation preview. Current agreed work: develop Han's visuals from Davey's bear-form, caked-up, and gnome-styled direction. This is not authorization to invent all remaining game systems.

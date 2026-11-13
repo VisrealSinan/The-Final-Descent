@@ -1,0 +1,12 @@
+Use case: style-transfer.
+Asset type: Han character concept v2 for The Final Descent.
+Input image is the EDIT TARGET: Han's first front/rear concept sheet.
+User correction: Han needs to look much more GNOME-STYLED. Keep him a druid in actual bear form, but radically change the proportions and styling to suggest a fantasy gnome who has transformed into a bear.
+Redesign both views consistently:
+- SHORT, squat, compact bear body, much lower to the ground than the reference. Stubby short sturdy legs, oversized broad paws, a large expressive head relative to his body, round ears, broad rounded muzzle and bushy eyebrows. Strong, capable little bear with a huge personality; not the original giant grizzly and not a human body.
+- Preserve the defining comically ample, rounded, furry rear haunches and tiny tail. The silhouette should read as a compact gnomish bear with disproportionately generous haunches. Keep this plainly visible in rear three-quarter view.
+- Add recognizable fantasy GNOMISH TINKERER details with subtle druid flavor: chunky aged-brass round goggles perched on his forehead so his expressive green eyes remain visible; thick leather goggle strap around head; compact brown leather shoulder harness with a bronze GEAR-SHAPED clasp containing a small green LEAF motif; one small practical belt pouch and simple bronze fittings. Keep equipment sparse and readable. Moss-green wraps on forelegs. Nothing hiding the rump.
+- Bear's natural brown cheek and chin fur forms an exuberant bushy moustache-and-beard-like ruff, suggesting a gnome's facial hair without turning him humanoid. Give him a mischievous, self-satisfied expression.
+Preserve rich warm brown fur, lighter muzzle/chest, dark-fantasy hand-painted 2D art quality and charcoal studio backdrop. Same character equipment in both views. No weapons, machines, extra characters, spell effects, mechanical limbs, giant headdress or new narrative props. No clothing that makes him look like a bipedal gnome in a bear suit.
+Composition: two full-body views side by side, front three-quarter left and rear three-quarter right. Both stand on ALL FOUR PAWS, all paws and ears within frame. Generous separation. The revised bodies should look unmistakably shorter and squatter, rather than only adding goggles to the existing tall bear.
+Parody-game humor from proportions and personality, suitable for The Final Descent. No human buttocks, no nudity details, no sexual posing. No text, captions, labels, logo, UI or watermark.

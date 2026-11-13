@@ -44,7 +44,7 @@ The original unmasked concept remains available as a face reference; v3 supersed
 
 Davey selected Godot and explicitly requested complete sprite sheets ready to import. [Visreal asset pack and import instructions](../../assets/characters/visreal/README.md).
 
-The first pack contains idle, walk, basic dual-sword attack, hurt, and death in four cardinal directions. These support the agreed movement, weapons, and death behavior; special skills and combat numbers remain undecided. Four frames per animation and initial playback rates are implementation defaults, not approved combat timing or balance.
+The first pack contains idle, walk, basic dual-sword attack, hurt, and death in four cardinal directions. Davey reviewed the preview and said "it looks good." These support the agreed movement, weapons, and death behavior; special skills and combat numbers remain undecided. Four frames per animation and initial playback rates are implementation defaults, not approved combat timing or balance.
 
 ## Skills
 
