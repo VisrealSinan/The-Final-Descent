@@ -1,0 +1,1902 @@
+{
+	"anchor": [
+		192,
+		348
+	],
+	"animations": {
+		"attack_east": {
+			"fps": 10.0,
+			"frames": [
+				"attack_east_00",
+				"attack_east_01",
+				"attack_east_02",
+				"attack_east_03"
+			],
+			"loop": false
+		},
+		"attack_north": {
+			"fps": 10.0,
+			"frames": [
+				"attack_north_00",
+				"attack_north_01",
+				"attack_north_02",
+				"attack_north_03"
+			],
+			"loop": false
+		},
+		"attack_south": {
+			"fps": 10.0,
+			"frames": [
+				"attack_south_00",
+				"attack_south_01",
+				"attack_south_02",
+				"attack_south_03"
+			],
+			"loop": false
+		},
+		"attack_west": {
+			"fps": 10.0,
+			"frames": [
+				"attack_west_00",
+				"attack_west_01",
+				"attack_west_02",
+				"attack_west_03"
+			],
+			"loop": false
+		},
+		"death_east": {
+			"fps": 6.0,
+			"frames": [
+				"death_east_00",
+				"death_east_01",
+				"death_east_02",
+				"death_east_03"
+			],
+			"loop": false
+		},
+		"death_north": {
+			"fps": 6.0,
+			"frames": [
+				"death_north_00",
+				"death_north_01",
+				"death_north_02",
+				"death_north_03"
+			],
+			"loop": false
+		},
+		"death_south": {
+			"fps": 6.0,
+			"frames": [
+				"death_south_00",
+				"death_south_01",
+				"death_south_02",
+				"death_south_03"
+			],
+			"loop": false
+		},
+		"death_west": {
+			"fps": 6.0,
+			"frames": [
+				"death_west_00",
+				"death_west_01",
+				"death_west_02",
+				"death_west_03"
+			],
+			"loop": false
+		},
+		"hurt_east": {
+			"fps": 10.0,
+			"frames": [
+				"hurt_east_00",
+				"hurt_east_01",
+				"hurt_east_02",
+				"hurt_east_03"
+			],
+			"loop": false
+		},
+		"hurt_north": {
+			"fps": 10.0,
+			"frames": [
+				"hurt_north_00",
+				"hurt_north_01",
+				"hurt_north_02",
+				"hurt_north_03"
+			],
+			"loop": false
+		},
+		"hurt_south": {
+			"fps": 10.0,
+			"frames": [
+				"hurt_south_00",
+				"hurt_south_01",
+				"hurt_south_02",
+				"hurt_south_03"
+			],
+			"loop": false
+		},
+		"hurt_west": {
+			"fps": 10.0,
+			"frames": [
+				"hurt_west_00",
+				"hurt_west_01",
+				"hurt_west_02",
+				"hurt_west_03"
+			],
+			"loop": false
+		},
+		"idle_east": {
+			"fps": 5.0,
+			"frames": [
+				"idle_east_00",
+				"idle_east_01",
+				"idle_east_02",
+				"idle_east_03"
+			],
+			"loop": true
+		},
+		"idle_north": {
+			"fps": 5.0,
+			"frames": [
+				"idle_north_00",
+				"idle_north_01",
+				"idle_north_02",
+				"idle_north_03"
+			],
+			"loop": true
+		},
+		"idle_south": {
+			"fps": 5.0,
+			"frames": [
+				"idle_south_00",
+				"idle_south_01",
+				"idle_south_02",
+				"idle_south_03"
+			],
+			"loop": true
+		},
+		"idle_west": {
+			"fps": 5.0,
+			"frames": [
+				"idle_west_00",
+				"idle_west_01",
+				"idle_west_02",
+				"idle_west_03"
+			],
+			"loop": true
+		},
+		"walk_east": {
+			"fps": 8.0,
+			"frames": [
+				"walk_east_00",
+				"walk_east_01",
+				"walk_east_02",
+				"walk_east_03"
+			],
+			"loop": true
+		},
+		"walk_north": {
+			"fps": 8.0,
+			"frames": [
+				"walk_north_00",
+				"walk_north_01",
+				"walk_north_02",
+				"walk_north_03"
+			],
+			"loop": true
+		},
+		"walk_south": {
+			"fps": 8.0,
+			"frames": [
+				"walk_south_00",
+				"walk_south_01",
+				"walk_south_02",
+				"walk_south_03"
+			],
+			"loop": true
+		},
+		"walk_west": {
+			"fps": 8.0,
+			"frames": [
+				"walk_west_00",
+				"walk_west_01",
+				"walk_west_02",
+				"walk_west_03"
+			],
+			"loop": true
+		}
+	},
+	"canvas": [
+		384,
+		384
+	],
+	"character": "Ghalrym",
+	"directions": [
+		"south",
+		"west",
+		"east",
+		"north"
+	],
+	"frames": {
+		"attack_east_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				71,
+				68
+			],
+			"region": [
+				36,
+				649,
+				191,
+				279
+			],
+			"sheet": "attack.png"
+		},
+		"attack_east_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				58,
+				70
+			],
+			"region": [
+				336,
+				651,
+				258,
+				277
+			],
+			"sheet": "attack.png"
+		},
+		"attack_east_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				47,
+				67
+			],
+			"region": [
+				639,
+				648,
+				288,
+				281
+			],
+			"sheet": "attack.png"
+		},
+		"attack_east_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				73,
+				65
+			],
+			"region": [
+				978,
+				646,
+				201,
+				282
+			],
+			"sheet": "attack.png"
+		},
+		"attack_north_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				108,
+				71
+			],
+			"region": [
+				73,
+				965,
+				206,
+				275
+			],
+			"sheet": "attack.png"
+		},
+		"attack_north_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				76,
+				68
+			],
+			"region": [
+				354,
+				962,
+				227,
+				277
+			],
+			"sheet": "attack.png"
+		},
+		"attack_north_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				80,
+				66
+			],
+			"region": [
+				672,
+				960,
+				221,
+				280
+			],
+			"sheet": "attack.png"
+		},
+		"attack_north_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				92,
+				63
+			],
+			"region": [
+				997,
+				957,
+				202,
+				283
+			],
+			"sheet": "attack.png"
+		},
+		"attack_south_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				79,
+				82
+			],
+			"region": [
+				44,
+				36,
+				204,
+				267
+			],
+			"sheet": "attack.png"
+		},
+		"attack_south_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				94,
+				79
+			],
+			"region": [
+				372,
+				33,
+				202,
+				270
+			],
+			"sheet": "attack.png"
+		},
+		"attack_south_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				79,
+				71
+			],
+			"region": [
+				671,
+				25,
+				241,
+				278
+			],
+			"sheet": "attack.png"
+		},
+		"attack_south_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				87,
+				76
+			],
+			"region": [
+				992,
+				30,
+				214,
+				273
+			],
+			"sheet": "attack.png"
+		},
+		"attack_west_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				117,
+				73
+			],
+			"region": [
+				82,
+				340,
+				197,
+				274
+			],
+			"sheet": "attack.png"
+		},
+		"attack_west_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				48,
+				77
+			],
+			"region": [
+				326,
+				344,
+				272,
+				270
+			],
+			"sheet": "attack.png"
+		},
+		"attack_west_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				42,
+				77
+			],
+			"region": [
+				634,
+				344,
+				290,
+				271
+			],
+			"sheet": "attack.png"
+		},
+		"attack_west_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				106,
+				69
+			],
+			"region": [
+				1011,
+				336,
+				212,
+				279
+			],
+			"sheet": "attack.png"
+		},
+		"death_east_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				100,
+				47
+			],
+			"region": [
+				65,
+				628,
+				158,
+				304
+			],
+			"sheet": "death.png"
+		},
+		"death_east_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				85,
+				81
+			],
+			"region": [
+				363,
+				662,
+				193,
+				245
+			],
+			"sheet": "death.png"
+		},
+		"death_east_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				49,
+				127
+			],
+			"region": [
+				641,
+				708,
+				238,
+				211
+			],
+			"sheet": "death.png"
+		},
+		"death_east_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				14,
+				197
+			],
+			"region": [
+				919,
+				778,
+				315,
+				136
+			],
+			"sheet": "death.png"
+		},
+		"death_north_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				114,
+				58
+			],
+			"region": [
+				79,
+				952,
+				179,
+				286
+			],
+			"sheet": "death.png"
+		},
+		"death_north_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				93,
+				76
+			],
+			"region": [
+				371,
+				970,
+				196,
+				268
+			],
+			"sheet": "death.png"
+		},
+		"death_north_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				65,
+				117
+			],
+			"region": [
+				657,
+				1011,
+				214,
+				225
+			],
+			"sheet": "death.png"
+		},
+		"death_north_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				18,
+				188
+			],
+			"region": [
+				923,
+				1082,
+				291,
+				157
+			],
+			"sheet": "death.png"
+		},
+		"death_south_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				92,
+				62
+			],
+			"region": [
+				57,
+				16,
+				178,
+				288
+			],
+			"sheet": "death.png"
+		},
+		"death_south_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				88,
+				88
+			],
+			"region": [
+				366,
+				42,
+				178,
+				263
+			],
+			"sheet": "death.png"
+		},
+		"death_south_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				62,
+				136
+			],
+			"region": [
+				654,
+				90,
+				185,
+				220
+			],
+			"sheet": "death.png"
+		},
+		"death_south_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				35,
+				212
+			],
+			"region": [
+				940,
+				166,
+				301,
+				156
+			],
+			"sheet": "death.png"
+		},
+		"death_west_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				129,
+				50
+			],
+			"region": [
+				94,
+				317,
+				171,
+				302
+			],
+			"sheet": "death.png"
+		},
+		"death_west_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				97,
+				88
+			],
+			"region": [
+				375,
+				355,
+				208,
+				260
+			],
+			"sheet": "death.png"
+		},
+		"death_west_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				51,
+				137
+			],
+			"region": [
+				643,
+				404,
+				239,
+				216
+			],
+			"sheet": "death.png"
+		},
+		"death_west_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				13,
+				206
+			],
+			"region": [
+				918,
+				473,
+				329,
+				148
+			],
+			"sheet": "death.png"
+		},
+		"hurt_east_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				104,
+				59
+			],
+			"region": [
+				69,
+				640,
+				196,
+				293
+			],
+			"sheet": "hurt.png"
+		},
+		"hurt_east_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				100,
+				85
+			],
+			"region": [
+				378,
+				666,
+				184,
+				267
+			],
+			"sheet": "hurt.png"
+		},
+		"hurt_east_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				104,
+				67
+			],
+			"region": [
+				696,
+				648,
+				183,
+				285
+			],
+			"sheet": "hurt.png"
+		},
+		"hurt_east_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				104,
+				58
+			],
+			"region": [
+				1009,
+				639,
+				172,
+				294
+			],
+			"sheet": "hurt.png"
+		},
+		"hurt_north_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				92,
+				56
+			],
+			"region": [
+				57,
+				950,
+				219,
+				290
+			],
+			"sheet": "hurt.png"
+		},
+		"hurt_north_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				111,
+				71
+			],
+			"region": [
+				389,
+				965,
+				190,
+				275
+			],
+			"sheet": "hurt.png"
+		},
+		"hurt_north_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				112,
+				58
+			],
+			"region": [
+				704,
+				952,
+				183,
+				288
+			],
+			"sheet": "hurt.png"
+		},
+		"hurt_north_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				106,
+				56
+			],
+			"region": [
+				1011,
+				950,
+				184,
+				291
+			],
+			"sheet": "hurt.png"
+		},
+		"hurt_south_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				93,
+				60
+			],
+			"region": [
+				58,
+				14,
+				217,
+				289
+			],
+			"sheet": "hurt.png"
+		},
+		"hurt_south_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				97,
+				87
+			],
+			"region": [
+				375,
+				41,
+				176,
+				262
+			],
+			"sheet": "hurt.png"
+		},
+		"hurt_south_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				94,
+				67
+			],
+			"region": [
+				686,
+				21,
+				181,
+				282
+			],
+			"sheet": "hurt.png"
+		},
+		"hurt_south_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				90,
+				65
+			],
+			"region": [
+				995,
+				19,
+				189,
+				284
+			],
+			"sheet": "hurt.png"
+		},
+		"hurt_west_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				97,
+				63
+			],
+			"region": [
+				62,
+				330,
+				188,
+				294
+			],
+			"sheet": "hurt.png"
+		},
+		"hurt_west_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				109,
+				88
+			],
+			"region": [
+				387,
+				355,
+				185,
+				267
+			],
+			"sheet": "hurt.png"
+		},
+		"hurt_west_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				105,
+				72
+			],
+			"region": [
+				697,
+				339,
+				189,
+				283
+			],
+			"sheet": "hurt.png"
+		},
+		"hurt_west_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				124,
+				62
+			],
+			"region": [
+				1029,
+				329,
+				170,
+				293
+			],
+			"sheet": "hurt.png"
+		},
+		"idle_east_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				101,
+				57
+			],
+			"region": [
+				66,
+				638,
+				154,
+				297
+			],
+			"sheet": "idle.png"
+		},
+		"idle_east_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				101,
+				55
+			],
+			"region": [
+				379,
+				636,
+				154,
+				299
+			],
+			"sheet": "idle.png"
+		},
+		"idle_east_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				101,
+				52
+			],
+			"region": [
+				693,
+				633,
+				156,
+				302
+			],
+			"sheet": "idle.png"
+		},
+		"idle_east_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				101,
+				56
+			],
+			"region": [
+				1006,
+				637,
+				154,
+				298
+			],
+			"sheet": "idle.png"
+		},
+		"idle_north_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				121,
+				62
+			],
+			"region": [
+				86,
+				956,
+				162,
+				283
+			],
+			"sheet": "idle.png"
+		},
+		"idle_north_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				122,
+				58
+			],
+			"region": [
+				400,
+				952,
+				162,
+				287
+			],
+			"sheet": "idle.png"
+		},
+		"idle_north_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				120,
+				56
+			],
+			"region": [
+				712,
+				950,
+				162,
+				288
+			],
+			"sheet": "idle.png"
+		},
+		"idle_north_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				123,
+				61
+			],
+			"region": [
+				1028,
+				955,
+				161,
+				284
+			],
+			"sheet": "idle.png"
+		},
+		"idle_south_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				93,
+				68
+			],
+			"region": [
+				58,
+				22,
+				185,
+				283
+			],
+			"sheet": "idle.png"
+		},
+		"idle_south_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				91,
+				65
+			],
+			"region": [
+				369,
+				19,
+				189,
+				286
+			],
+			"sheet": "idle.png"
+		},
+		"idle_south_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				90,
+				61
+			],
+			"region": [
+				682,
+				15,
+				191,
+				290
+			],
+			"sheet": "idle.png"
+		},
+		"idle_south_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				93,
+				69
+			],
+			"region": [
+				998,
+				23,
+				186,
+				282
+			],
+			"sheet": "idle.png"
+		},
+		"idle_west_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				135,
+				54
+			],
+			"region": [
+				100,
+				321,
+				151,
+				299
+			],
+			"sheet": "idle.png"
+		},
+		"idle_west_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				135,
+				53
+			],
+			"region": [
+				413,
+				320,
+				151,
+				300
+			],
+			"sheet": "idle.png"
+		},
+		"idle_west_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				135,
+				52
+			],
+			"region": [
+				727,
+				319,
+				152,
+				301
+			],
+			"sheet": "idle.png"
+		},
+		"idle_west_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				136,
+				55
+			],
+			"region": [
+				1041,
+				322,
+				151,
+				298
+			],
+			"sheet": "idle.png"
+		},
+		"walk_east_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				94,
+				56
+			],
+			"region": [
+				59,
+				637,
+				189,
+				275
+			],
+			"sheet": "walk.png"
+		},
+		"walk_east_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				103,
+				56
+			],
+			"region": [
+				381,
+				637,
+				150,
+				280
+			],
+			"sheet": "walk.png"
+		},
+		"walk_east_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				101,
+				57
+			],
+			"region": [
+				693,
+				638,
+				178,
+				285
+			],
+			"sheet": "walk.png"
+		},
+		"walk_east_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				104,
+				58
+			],
+			"region": [
+				1009,
+				639,
+				157,
+				274
+			],
+			"sheet": "walk.png"
+		},
+		"walk_north_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				120,
+				59
+			],
+			"region": [
+				85,
+				953,
+				154,
+				286
+			],
+			"sheet": "walk.png"
+		},
+		"walk_north_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				124,
+				59
+			],
+			"region": [
+				402,
+				953,
+				149,
+				283
+			],
+			"sheet": "walk.png"
+		},
+		"walk_north_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				118,
+				55
+			],
+			"region": [
+				710,
+				949,
+				156,
+				287
+			],
+			"sheet": "walk.png"
+		},
+		"walk_north_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				131,
+				57
+			],
+			"region": [
+				1036,
+				951,
+				141,
+				290
+			],
+			"sheet": "walk.png"
+		},
+		"walk_south_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				104,
+				66
+			],
+			"region": [
+				69,
+				20,
+				167,
+				293
+			],
+			"sheet": "walk.png"
+		},
+		"walk_south_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				103,
+				65
+			],
+			"region": [
+				381,
+				19,
+				168,
+				281
+			],
+			"sheet": "walk.png"
+		},
+		"walk_south_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				102,
+				65
+			],
+			"region": [
+				694,
+				19,
+				162,
+				295
+			],
+			"sheet": "walk.png"
+		},
+		"walk_south_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				104,
+				68
+			],
+			"region": [
+				1009,
+				22,
+				166,
+				280
+			],
+			"sheet": "walk.png"
+		},
+		"walk_west_00": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				106,
+				56
+			],
+			"region": [
+				71,
+				323,
+				185,
+				288
+			],
+			"sheet": "walk.png"
+		},
+		"walk_west_01": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				138,
+				56
+			],
+			"region": [
+				416,
+				323,
+				152,
+				292
+			],
+			"sheet": "walk.png"
+		},
+		"walk_west_02": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				105,
+				58
+			],
+			"region": [
+				697,
+				325,
+				182,
+				290
+			],
+			"sheet": "walk.png"
+		},
+		"walk_west_03": {
+			"anchor": [
+				192,
+				348
+			],
+			"canvas": [
+				384,
+				384
+			],
+			"offset": [
+				137,
+				60
+			],
+			"region": [
+				1042,
+				327,
+				155,
+				285
+			],
+			"sheet": "walk.png"
+		}
+	},
+	"version": 1
+}

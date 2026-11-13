@@ -27,4 +27,4 @@ Created with built-in OpenAI image generation. [Exact v3 edit prompt](HAN-CONCEP
 
 ## Assets and skills
 
-The visual design is approved. When preparing Han's game assets, use the same delivery approach as Visreal: complete transparent sprite sheets with Godot import resources, rather than loose poses requiring later assembly. Han's skills, stats, combat behavior, and animation requirements are not yet defined; no Han sprite pack has been built yet.
+At Davey's request, a first [Godot-ready sprite pack](../../assets/characters/han/README.md) is now built from the approved design: idle, walk, basic forepaw swipe, hurt, and collapse/death, each with four frames in four directions. It includes transparent PNG sheets, atlas metadata, SpriteFrames and a visual scene. Han's special skills, stats and combat behavior are not yet defined. Base attack poses and playback rates are presentation defaults, not a finalized skill kit.

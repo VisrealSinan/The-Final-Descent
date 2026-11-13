@@ -37,8 +37,8 @@ A Druid who chooses bear form and enjoys being a caked-up bear. Davey approved t
 ## Design sequence
 
 1. Visreal's appearance and initial Godot sprite pack are approved.
-2. Han's gnome-styled bear concept v3 is approved; its sprite pack remains to be built.
-3. Current focus: Ghalrym's catgirl druid visuals, with a human face. All character skill kits remain to be defined with Davey.
+2. Han's gnome-styled bear concept v3 is approved, and its first Godot sprite pack is built.
+3. Ghalrym's human-faced catgirl v4 is the production reference, and its first Godot sprite pack is built. All character skill kits remain to be defined with Davey.
 4. Refine each character's gameplay after appearance and skills are settled.
 
 ## Decisions still open
@@ -55,4 +55,4 @@ Earlier assistant suggestions such as shadow rescue, healing purrs, an AI compan
 
 Davey supplies the creative direction. AI can make routine implementation decisions within agreed scope. Major unresolved design decisions and scope expansion go back to Davey. Overnight tasks must be human-defined and approved.
 
-Completed work: repository setup, a Godot-ready Visreal sprite pack with import resources and animation preview, and Han's approved visual concept. Current agreed work: develop Ghalrym's catgirl druid visuals with a human face following Davey's corrections. This is not authorization to invent all remaining game systems.
+Completed work: repository setup, character concepts, and first Godot-ready sprite packs for Visreal, Han, and Ghalrym with import resources and a shared animation preview. Davey explicitly requested Han and Ghalrym's sprite sheets after the visual revisions. This is not authorization to invent all remaining game systems.

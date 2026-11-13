@@ -2,15 +2,15 @@
 
 A single-player, top-down 2D dungeon crawler with RPG elements, made for Andrew, Davey, and Han's seven-day hackathon.
 
-**Status:** Visreal's first Godot-ready sprite pack and animation preview are available. Dungeon gameplay has not been implemented yet.
+**Status:** All three heroes have a first Godot-ready sprite pack and a shared animation preview. Dungeon gameplay has not been implemented yet.
 
 ## How to play
 
 Gameplay launch instructions and controls will be added when the first playable dungeon build exists. The engine is Godot; the target platform remains to be decided.
 
-To inspect the character assets now, import `project.godot` in Godot 4 and press **F6** in `previews/visreal_preview.tscn`, or **F5** to run the configured preview. Space pauses, Right steps frames while paused, R replays, and T changes the backdrop. Preview controls are not final game controls.
+To inspect the character assets now, import `project.godot` in Godot 4 and press **F5**. Press **1** for Visreal, **2** for Han, or **3** for Ghalrym. Space pauses, Right steps frames while paused, R replays, and T changes the panel backdrop. Preview controls are not final game controls. The original standalone Visreal preview remains available.
 
-[Sprite pack and Godot import instructions](assets/characters/visreal/README.md). Tested with Godot 4.7.2.
+Sprite packs and import instructions: [Visreal](assets/characters/visreal/README.md), [Han](assets/characters/han/README.md), [Ghalrym](assets/characters/ghalrym/README.md). Each includes 5 transparent sheets, 20 animations, 80 frames, a SpriteFrames resource, a visual scene, and atlas JSON. Tested with Godot 4.7.2.
 
 The agreed game loop is:
 
@@ -31,7 +31,7 @@ There is no progression between runs in the initial version. Enemies, skills, st
 - [Ghalrym character brief and concepts](docs/characters/GHALRYM.md)
 - [Official hackathon rules](Hackathon-Official-Rules.md)
 
-Visreal's appearance and first sprite pack are approved. Han's gnome-bear concept v3 is approved. Ghalrym's catgirl druid visuals are being refined. Character skills remain to be defined before refining gameplay.
+Visreal's appearance and first sprite pack are approved. Han's gnome-bear v3 and Ghalrym's human-faced catgirl v4 are the chosen references for their new sprite packs. Character skills remain to be defined before refining gameplay.
 
 ## Hackathon window
 
@@ -43,7 +43,7 @@ The human defines the game and approves major creative decisions. AI may refine 
 ## Tools used
 
 - ChatGPT / Codex: planning, design documentation, and repository setup.
-- Built-in OpenAI image generation: character concepts and revisions for Visreal, Han, and Ghalrym, plus Visreal's transparent sprite sheets.
+- Built-in OpenAI image generation: character concepts, revisions, and transparent sprite sheets for Visreal, Han, and Ghalrym.
 - Godot 4.7.2: sprite resources, preview rendering, and import/playback validation.
 - Git and GitHub: version control and project hosting.
 

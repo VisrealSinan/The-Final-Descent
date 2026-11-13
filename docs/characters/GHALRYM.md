@@ -9,13 +9,13 @@
 - Davey then clarified the design should look like a catgirl druid form.
 - After seeing the upright catgirl concept, Davey requested a human face.
 
-## Latest concept: v4, awaiting review
+## Sprite reference: v4
 
 ![Ghalrym v4: catgirl druid form with human face](../../assets/concepts/ghalrym-v4.png)
 
 The latest concept has a human face, long silver-lavender hair, turquoise eyes, cat ears, a long fluffy tail, furred limbs, clawed hands, and feline paws. The upright form wears a violet leather druid outfit with leaf panels and bronze fittings. A circuit-inlaid leaf pendant and an anime-catgirl mascot charm reflect the original interests.
 
-V4 changes the face from feline to human in both views while preserving the v3 body, outfit, colors, and composition. The specific palette, accessories, facial identity, and outfit details remain visual proposals until the user approves the result. No special skills or mechanical abilities are implied by the decorations.
+V4 changes the face from feline to human in both views while preserving the v3 body, outfit, colors, and composition. Davey then requested sprite sheets for Ghalrym and Han, establishing v4 as Ghalrym's production reference. No special skills or mechanical abilities are implied by the decorations.
 
 Created with built-in OpenAI image generation. [Exact v4 face-edit prompt](GHALRYM-CONCEPT-V4-PROMPT.txt).
 
@@ -27,4 +27,4 @@ Created with built-in OpenAI image generation. [Exact v4 face-edit prompt](GHALR
 
 ## Assets and skills
 
-Visual review is in progress. Eventual game assets should be delivered as complete sprite sheets with Godot import resources, matching the Visreal delivery approach. Ghalrym's skills, stats, combat behavior, and animation requirements remain to be defined with Davey.
+A first [Godot-ready sprite pack](../../assets/characters/ghalrym/README.md) is now built: idle, walk, basic clawed-hand swipe, hurt, and collapse/death, each with four frames in four directions. It includes complete transparent sheets and import resources, matching Visreal's delivery approach. Ghalrym's special skills, stats and combat behavior remain to be defined with Davey; initial attack poses and playback rates are presentation defaults.

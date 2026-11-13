@@ -2,8 +2,8 @@
 config_version=5
 
 [application]
-config/name="The Final Descent - Visreal Asset Preview"
-run/main_scene="res://previews/visreal_preview.tscn"
+config/name="The Final Descent - Character Asset Preview"
+run/main_scene="res://previews/characters_preview.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 
 [display]
