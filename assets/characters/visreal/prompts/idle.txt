@@ -1,0 +1,14 @@
+Use case: stylized-concept.
+Asset type: production 2D game IDLE animation sprite sheet for Godot.
+Reference image: approved Visreal character design. Transform it into compact top-down game sprites, preserving identity, costume, cape and mask.
+OUTPUT EXACTLY ONE 1024 x 1024 PNG with a TRUE TRANSPARENT alpha background.
+Layout: EXACTLY 4 equal columns and 4 equal rows, sixteen 256 x 256 cells. No gaps between cells, no visible grid, no labels or text. Place one complete sprite INSIDE EACH cell. EVERY sprite including both sword tips and cape fits within that cell with at least 24 pixels transparent padding. Uniform character size across all cells. Each standing character is about 176 pixels tall, centered at x=128 in its cell with feet at y=218. Do not crop, intersect, merge, or omit any sprite.
+Camera: fixed high three-quarter TOP-DOWN dungeon crawler camera, looking down at approximately 55 degrees above the ground. Clearly see the top of the head, shoulders and boots; foreshortened torso and legs. Orthographic, consistent camera in all frames. Not eye-level concept art.
+ROW 1: face DOWN / SOUTH, toward the bottom of the screen, front of mask visible.
+ROW 2: face LEFT / WEST, toward screen left, left-facing profile.
+ROW 3: face RIGHT / EAST, toward screen right, right-facing profile.
+ROW 4: face UP / NORTH, away from viewer, back of head and long cape visible.
+Each row is a FOUR-FRAME subtle breathing IDLE loop, columns in time order. Column 1 neutral, column 2 slight inhale, column 3 chest raised and cape gently shifted, column 4 exhale toward neutral. Feet remain planted at same anchor. Head and overall scale remain consistent. Swords held low in relaxed ready stance, one in each hand.
+Identity: Visreal, adult male undead blood elf rogue, solid athletic build, long pointed ears, ash-gray skin, pale eyes, black hair in a ponytail, full dark beard under a crimson bandit mask with black edging and diagonal dark X stitches. Black leather armor with crimson panels. Two steel SWORDS, not daggers. Long black cape with deep crimson lining ending above ankles, no hood. Match reference equipment. Rear view shows black exterior of cape and ponytail; do not show a face when facing north.
+Style: clean hand-painted 2D dark fantasy game sprites, WoW-inspired chunky readable silhouettes, simplified details readable at small size, restrained highlights. Same outfit/color palette/anatomy throughout. Crisp colored silhouette edges with alpha, no dark matte or white outline.
+Only sprites and transparency. NO background, floor, cast shadows, checkerboard, scenery, UI, borders, lettering, extra characters, extra weapons, or spell effects.

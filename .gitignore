@@ -13,3 +13,8 @@ desktop.ini
 # Temporary working files
 tmp/
 *.tmp
+
+# Godot caches and local builds
+.godot/
+builds/
+*.zip

@@ -2,11 +2,15 @@
 
 A single-player, top-down 2D dungeon crawler with RPG elements, made for Andrew, Davey, and Han's seven-day hackathon.
 
-**Status:** Design and character concept stage. There is no playable build yet.
+**Status:** Visreal's first Godot-ready sprite pack and animation preview are available. Dungeon gameplay has not been implemented yet.
 
 ## How to play
 
-Launch instructions and controls will be added when the first playable build exists. The platform and engine are still to be decided.
+Gameplay launch instructions and controls will be added when the first playable dungeon build exists. The engine is Godot; the target platform remains to be decided.
+
+To inspect the character assets now, import `project.godot` in Godot 4 and press **F6** in `previews/visreal_preview.tscn`, or **F5** to run the configured preview. Space pauses, Right steps frames while paused, R replays, and T changes the backdrop. Preview controls are not final game controls.
+
+[Sprite pack and Godot import instructions](assets/characters/visreal/README.md). Tested with Godot 4.7.2.
 
 The agreed game loop is:
 
@@ -37,7 +41,8 @@ The human defines the game and approves major creative decisions. AI may refine 
 ## Tools used
 
 - ChatGPT / Codex: planning, design documentation, and repository setup.
-- Built-in OpenAI image generation: Visreal's character concepts and revisions.
+- Built-in OpenAI image generation: Visreal's character concepts, revisions, and transparent sprite sheets.
+- Godot 4.7.2: sprite resources, preview rendering, and import/playback validation.
 - Git and GitHub: version control and project hosting.
 
 Update this list as additional tools are actually used. The rules do not require a per-asset tool mapping.

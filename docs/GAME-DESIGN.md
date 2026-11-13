@@ -10,6 +10,7 @@ This file records decisions made by Davey. Suggestions are not approved features
 - Survive as many floors of the void as possible; no fixed final floor has been specified.
 - Exactly five rooms per floor: an enemy-free spawn room plus four rooms containing enemies.
 - Dark fantasy, World of Warcraft-inspired parody art direction.
+- Engine: Godot, selected by Davey. The first deliverable is a character asset preview, not the playable dungeon crawler.
 
 ## Progression and death
 
@@ -42,7 +43,7 @@ A Druid who chooses bear form and enjoys being a caked-up bear. Appearance detai
 
 ## Decisions still open
 
-- Platform, engine, distribution method, and controls.
+- Target platform, distribution method, and gameplay controls.
 - Character skills, cooldowns, resources, and numerical stats.
 - Enemy types, behavior, and difficulty scaling.
 - Room connections, floor layouts, and the condition for descending.
@@ -54,4 +55,4 @@ Earlier assistant suggestions such as shadow rescue, healing purrs, an AI compan
 
 Davey supplies the creative direction. AI can make routine implementation decisions within agreed scope. Major unresolved design decisions and scope expansion go back to Davey. Overnight tasks must be human-defined and approved.
 
-Current agreed work: repository setup, recording these decisions, and developing Visreal's appearance from Davey's description. This is not authorization to invent all remaining game systems.
+Current agreed work: repository setup, recording these decisions, and preparing Godot-ready Visreal sprite sheets based on Davey's approved v3 appearance. Package the sheets with import resources and an animation preview. This is not authorization to invent all remaining game systems.
