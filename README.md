@@ -21,7 +21,7 @@ The agreed game loop is:
 5. Leveling increases stats for the remainder of the run.
 6. On death, use the game-over screen to return to the main menu or restart from floor one.
 
-There is no progression between runs in the initial version. Enemies, skills, stats, further control behavior, and floor-transition details are still being designed.
+There is no progression between runs in the initial version. Visreal's shadow-and-poison skill kit is approved; enemies, the other heroes' skills, stats, further control behavior, and floor-transition details are still being designed.
 
 ## Design
 
@@ -31,7 +31,7 @@ There is no progression between runs in the initial version. Enemies, skills, st
 - [Ghalrym character brief and concepts](docs/characters/GHALRYM.md)
 - [Official hackathon rules](Hackathon-Official-Rules.md)
 
-Visreal's appearance and first sprite pack are approved. Han's gnome-bear v3 and Ghalrym's human-faced catgirl v4 are the chosen references for their new sprite packs. Character skills remain to be defined before refining gameplay.
+Visreal's appearance, first sprite pack, and skill kit are approved: **Twin Slashes, Shadowstep, Venom Blades, and Nightshade**. His five equipment slots are **paired swords, armor, cape, mask, and trinket**; item effects are being designed. These gameplay systems are not implemented yet. Han's gnome-bear v3 and Ghalrym's human-faced catgirl v4 are the chosen references for their new sprite packs; their skills remain open.
 
 ## Hackathon window
 

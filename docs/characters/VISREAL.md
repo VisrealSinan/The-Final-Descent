@@ -44,23 +44,45 @@ The original unmasked concept remains available as a face reference; v3 supersed
 
 Davey selected Godot and explicitly requested complete sprite sheets ready to import. [Visreal asset pack and import instructions](../../assets/characters/visreal/README.md).
 
-The first pack contains idle, walk, basic dual-sword attack, hurt, and death in four cardinal directions. Davey reviewed the preview and said "it looks good." These support the agreed movement, weapons, and death behavior; special skills and combat numbers remain undecided. Four frames per animation and initial playback rates are implementation defaults, not approved combat timing or balance.
+The first pack contains idle, walk, basic dual-sword attack, hurt, and death in four cardinal directions. Davey reviewed the preview and said "it looks good." These support the agreed movement, weapons, and death behavior. The approved signature skills below are not implemented or represented by dedicated effect assets yet. Four frames per animation and initial playback rates are implementation defaults, not approved combat timing or balance.
 
 ## Skills
 
 Davey confirmed the basic attack: close-range sword slashes directed with the arrow keys, with hold-to-repeat. All playable heroes are melee-only. Davey chose shadow- and poison-powered melee for Visreal's combat identity.
 
-Visreal's signature abilities, poison behavior, attack timing, reach, damage, resources, and numerical stats remain to be defined. Selecting the shadow and poison themes does not approve particular mechanics or change the approved appearance.
+Davey approved the complete starter kit below with "I like that kit for Visreal. Lets lock those in." These are agreed design decisions; gameplay is not implemented yet. The approved appearance remains the visual reference.
 
-### Proposed starter kit for discussion
+### Approved starter kit
 
-These are assistant suggestions to refine Davey's chosen themes, not approved features or implemented gameplay. The suggested two active skills and one passive are also provisional.
+The kit consists of one basic attack, two active skills, and one passive.
 
-| Slot | Working name | Proposed effect |
+| Slot | Name | Approved effect |
 | --- | --- | --- |
 | Basic attack | Twin Slashes | Repeating close-range dual-sword slashes using the agreed arrow-key controls. |
 | Active skill | Shadowstep | A short dash in the aim direction that empowers the next sword slash with shadow damage. |
 | Active skill | Venom Blades | Temporarily coats the swords so melee hits poison enemies, dealing damage over time. |
 | Passive | Nightshade | Shadow-empowered strikes deal extra damage to poisoned enemies. |
 
-No skill keys, costs, cooldowns, durations, poison stacking rules, or damage values are selected yet. Equipment slots and gameplay effects are also undecided; the existing swords, leather gear, cape, and mask describe his approved visuals.
+The intended combo is Venom Blades, melee hits to poison the enemy, then Shadowstep and a shadow-empowered slash benefiting from Nightshade. No skill keys, costs, cooldowns, durations, poison stacking rules, or damage values are selected yet.
+
+## Equipment
+
+### Approved slots
+
+Davey chose five equipment slots for Visreal: **paired swords, armor, cape, mask, and trinket**. The paired swords occupy one slot as a set. This replaces the earlier three-slot suggestion. Equipment rules for Han and Ghalrym are not decided by this choice.
+
+The swords, black-and-crimson leather armor, long cape, and crimson lower-face mask already have approved visual designs. Item names, gameplay bonuses, acquisition, replacement, and rarity remain undecided.
+
+### Proposed starting equipment for discussion
+
+These names and effects are proposals, not approved features. Numerical values are deferred with the game's stats. The proposed bonuses support Visreal's innate skills rather than being required to unlock them.
+
+| Slot | Proposed item | Proposed effect |
+| --- | --- | --- |
+| Paired swords | Duskfang & Venomfang | Increase melee hit damage. |
+| Armor | Crimsonhide Leathers | Reduce incoming damage. |
+| Cape | Longcloak of the Veil | Reduce Shadowstep's cooldown. |
+| Mask | Nightshade Wrap | Increase the damage dealt by poison. |
+| Trinket | Umbral Seal | Increase the shadow bonus damage on the slash empowered by Shadowstep. |
+
+These item names use the existing approved sword, armor, cape, and mask appearances. The trinket has no selected visual design. Whether this is a fixed starting loadout or equipment that can be replaced during a run remains to be chosen.

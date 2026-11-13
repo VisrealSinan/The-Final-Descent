@@ -21,7 +21,7 @@ This file records decisions made by Davey. Suggestions are not approved features
 - Holding an arrow key repeatedly performs the basic melee attack in that direction. Davey selected hold-to-repeat for ease of play; individual key presses are not required for successive attacks.
 - These mappings are agreed design, not yet implemented gameplay. Diagonal aiming and special-ability bindings remain to be decided. Repeat cadence will follow the attack timing once it is defined.
 - Visreal's basic attack is a close-range sword slash. Player attacks are melee-only; no ranged player attacks. This does not decide enemy attack types, which remain open.
-- Melee-only does not yet prescribe equal reach, damage, or attack speed; those values and special abilities remain to be designed with Davey.
+- Melee-only does not yet prescribe equal reach, damage, or attack speed. Those values remain open; Visreal's approved abilities are recorded below, and Han's and Ghalrym's kits remain to be designed with Davey.
 
 ## Progression and death
 
@@ -37,7 +37,14 @@ This file records decisions made by Davey. Suggestions are not approved features
 
 A gamer who is naturally a Rogue. He has a darker, self-sacrificing side and is prone to sneaking away to save his friends rather than himself. See [his appearance brief](characters/VISREAL.md).
 
-Davey chose shadow- and poison-powered melee as Visreal's combat direction. His dual-sword attacks remain close-range; specific abilities, poison behavior, and equipment effects are still being designed.
+Davey chose shadow- and poison-powered melee and approved this kit:
+
+- **Twin Slashes:** repeating close-range dual-sword attacks using the agreed arrow-key controls.
+- **Shadowstep:** a short dash in the aim direction that empowers the next sword slash with shadow damage.
+- **Venom Blades:** temporarily coats the swords so melee hits poison enemies, dealing damage over time.
+- **Nightshade:** a passive that gives shadow-empowered strikes extra damage against poisoned enemies.
+
+Davey also chose five equipment slots for Visreal: **paired swords, armor, cape, mask, and trinket**, with both swords occupying one slot as a set. Item names and bonuses are still proposals in [Visreal's character brief](characters/VISREAL.md#equipment). Skill bindings, poison stacking, timing, numerical balance, and equipment acquisition remain open. These mechanics are agreed design, not implemented gameplay.
 
 ### Ghalrym
 
@@ -51,15 +58,16 @@ A Druid who chooses bear form and enjoys being a caked-up bear. Davey approved t
 
 1. Visreal's appearance and initial Godot sprite pack are approved.
 2. Han's gnome-styled bear concept v3 is approved, and its first Godot sprite pack is built.
-3. Ghalrym's human-faced catgirl v4 is the production reference, and its first Godot sprite pack is built. All character skill kits remain to be defined with Davey.
-4. Refine each character's gameplay after appearance and skills are settled.
+3. Ghalrym's human-faced catgirl v4 is the production reference, and its first Godot sprite pack is built.
+4. Visreal's shadow-and-poison starter kit and five equipment slots are approved. Define his equipment effects next; Han's and Ghalrym's skill kits remain open.
+5. Refine each character's gameplay after appearance and skills are settled.
 
 ## Decisions still open
 
 - Target platform and distribution method.
 - Diagonal aiming and special-ability bindings; movement, attack key groups, and hold-to-repeat are decided above.
-- Character skills, cooldowns, resources, and numerical stats.
-- Equipment slots, item effects, acquisition, and any character-specific restrictions.
+- Han's and Ghalrym's skills; all characters' cooldowns, resources, and numerical stats; Visreal's detailed poison behavior.
+- Equipment slots for Han and Ghalrym; item effects, acquisition, and any character-specific restrictions. Visreal's five slots are decided above.
 - Enemy types, behavior, and difficulty scaling.
 - Room connections, floor layouts, and the condition for descending.
 - Specific art treatment, animation requirements, audio, and UI details.
@@ -72,4 +80,4 @@ Davey supplies the creative direction. AI can make routine implementation decisi
 
 Completed work: repository setup, character concepts, and first Godot-ready sprite packs for Visreal, Han, and Ghalrym with import resources and a shared animation preview. Davey explicitly requested Han and Ghalrym's sprite sheets after the visual revisions. This is not authorization to invent all remaining game systems.
 
-Next requested design work: skills and equipment. Basic movement, melee hit detection, and combat have not yet been implemented. A small playable combat test is the next proposed implementation milestone once the initial mechanics are defined; full dungeon and progression implementation remain later work.
+Next requested design work: Visreal's equipment names and effects, following approval of his skill kit and equipment slots. Basic movement, melee hit detection, and combat have not yet been implemented. A small playable combat test is the next proposed implementation milestone; full dungeon and progression implementation remain later work.
