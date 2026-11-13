@@ -15,13 +15,15 @@ Sprite packs and import instructions: [Visreal](assets/characters/visreal/README
 The agreed game loop is:
 
 1. Choose Visreal the Rogue, Ghalrym the Cat Druid, or Han the Bear Druid. Your chosen hero ventures alone.
-2. Start on floor one and survive as many floors as possible.
-3. Each floor contains five rooms: one enemy-free spawn room and four rooms with enemies.
+2. Start on floor one and descend through six floors.
+3. Each floor contains five rooms: one enemy-free spawn room and four rooms with enemies, including a floor boss within that room count.
 4. Move and actively use class-based melee attacks. Enemy kills award XP.
 5. Leveling increases stats for the remainder of the run.
-6. On death, use the game-over screen to return to the main menu or restart from floor one.
+6. Earn one equipment piece from each of the first five floor bosses, completing all five slots before floor six. The reward order remains to be chosen.
+7. Face a sixth-floor challenge themed around something the selected class fears or dislikes; its details will be designed later.
+8. On death, use the game-over screen to return to the main menu or restart from floor one.
 
-There is no progression between runs in the initial version. Visreal's shadow-and-poison skill kit is approved; enemies, the other heroes' skills, stats, further control behavior, and floor-transition details are still being designed.
+There is no progression between runs in the initial version; earned equipment resets with the run. Visreal's shadow-and-poison skill kit is approved; enemies and bosses, the other heroes' skills, stats, further control behavior, floor-transition details, and the finale are still being designed.
 
 ## Design
 

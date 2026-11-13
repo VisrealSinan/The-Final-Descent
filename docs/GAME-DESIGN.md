@@ -7,10 +7,20 @@ This file records decisions made by Davey. Suggestions are not approved features
 - Single-player, top-down 2D dungeon crawler with RPG elements.
 - Players select one of three heroes; the chosen hero ventures alone.
 - Direct movement and active class-based melee attacks. All three playable characters are melee-only, as chosen by Davey for fairness.
-- Survive as many floors of the void as possible; no fixed final floor has been specified.
+- A run spans six floors. Davey replaced the earlier endless-survival direction with a defined six-floor descent.
 - Exactly five rooms per floor: an enemy-free spawn room plus four rooms containing enemies.
 - Dark fantasy, World of Warcraft-inspired parody art direction.
 - Engine: Godot, selected by Davey. The first deliverable is a character asset preview, not the playable dungeon crawler.
+
+## Floors and boss rewards
+
+- Each floor has a boss. Boss encounters fit within the existing five-room-per-floor limit; their exact placement and encounter designs remain open.
+- Bosses drop one equipment piece per floor. The first five floors provide the five pieces needed to complete the hero's equipment before floor six.
+- The five rewards must cover all five equipment slots, rather than leave a slot missing through duplicate drops. Fixed versus randomized reward order remains to be decided.
+- Visreal's paired swords count as a single equipment reward for his paired-swords slot.
+- Floor six is the final floor, themed around something the selected class fears or dislikes. Davey explicitly deferred its detailed design.
+- The sixth boss's reward, the victory sequence, and whether Han and Ghalrym receive distinct final-floor variants despite both being Druids remain open. No specific fears, enemies, or final-floor mechanics have been chosen.
+- Starting equipment, reward collection/equipping behavior, and item names and bonuses remain open. These decisions do not remove the characters' approved visual outfits or weapons.
 
 ## Chosen gameplay controls
 
@@ -28,6 +38,7 @@ This file records decisions made by Davey. Suggestions are not approved features
 - Enemy kills grant XP during the run.
 - Leveling increases stats for the rest of that run.
 - No outside meta-progression in the initial version.
+- Equipment earned during a run does not carry into a new run.
 - Death leads to a game-over screen with options to return to the main menu or restart from floor one.
 - Stat definitions, values, XP curves, and level-up details will be defined later.
 
@@ -44,7 +55,7 @@ Davey chose shadow- and poison-powered melee and approved this kit:
 - **Venom Blades:** temporarily coats the swords so melee hits poison enemies, dealing damage over time.
 - **Nightshade:** a passive that gives shadow-empowered strikes extra damage against poisoned enemies.
 
-Davey also chose five equipment slots for Visreal: **paired swords, armor, cape, mask, and trinket**, with both swords occupying one slot as a set. Item names and bonuses are still proposals in [Visreal's character brief](characters/VISREAL.md#equipment). Skill bindings, poison stacking, timing, numerical balance, and equipment acquisition remain open. These mechanics are agreed design, not implemented gameplay.
+Davey also chose five equipment slots for Visreal: **paired swords, armor, cape, mask, and trinket**, with both swords occupying one slot as a set. Item names and bonuses are still proposals in [Visreal's character brief](characters/VISREAL.md#equipment). Equipment comes from the floor bosses as described above; skill bindings, poison stacking, timing, numerical balance, and reward order remain open. These mechanics are agreed design, not implemented gameplay.
 
 ### Ghalrym
 
@@ -60,16 +71,18 @@ A Druid who chooses bear form and enjoys being a caked-up bear. Davey approved t
 2. Han's gnome-styled bear concept v3 is approved, and its first Godot sprite pack is built.
 3. Ghalrym's human-faced catgirl v4 is the production reference, and its first Godot sprite pack is built.
 4. Visreal's shadow-and-poison starter kit and five equipment slots are approved. Define his equipment effects next; Han's and Ghalrym's skill kits remain open.
-5. Refine each character's gameplay after appearance and skills are settled.
+5. Six floors and boss equipment drops are approved, with five pieces earned before the class-themed final floor. Detailed final-floor design is deferred at Davey's request.
+6. Refine each character's gameplay after appearance and skills are settled.
 
 ## Decisions still open
 
 - Target platform and distribution method.
 - Diagonal aiming and special-ability bindings; movement, attack key groups, and hold-to-repeat are decided above.
 - Han's and Ghalrym's skills; all characters' cooldowns, resources, and numerical stats; Visreal's detailed poison behavior.
-- Equipment slots for Han and Ghalrym; item effects, acquisition, and any character-specific restrictions. Visreal's five slots are decided above.
-- Enemy types, behavior, and difficulty scaling.
-- Room connections, floor layouts, and the condition for descending.
+- Equipment slots for Han and Ghalrym; item names and effects, reward order, starting gear, collection/equipping behavior, and any character-specific restrictions. Boss drops and Visreal's five slots are decided above.
+- Enemy and boss types, behavior, and difficulty scaling.
+- Room connections, floor layouts, the condition for descending, and victory presentation.
+- Floor-six fears/dislikes, class or character variants, encounter details, and its boss reward; deferred for later discussion.
 - Specific art treatment, animation requirements, audio, and UI details.
 
 Earlier assistant suggestions such as shadow rescue, healing purrs, an AI companion, and cheek quake are unapproved ideas, not requirements.

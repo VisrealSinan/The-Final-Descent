@@ -71,9 +71,13 @@ The intended combo is Venom Blades, melee hits to poison the enemy, then Shadows
 
 Davey chose five equipment slots for Visreal: **paired swords, armor, cape, mask, and trinket**. The paired swords occupy one slot as a set. This replaces the earlier three-slot suggestion. Equipment rules for Han and Ghalrym are not decided by this choice.
 
-The swords, black-and-crimson leather armor, long cape, and crimson lower-face mask already have approved visual designs. Item names, gameplay bonuses, acquisition, replacement, and rarity remain undecided.
+The swords, black-and-crimson leather armor, long cape, and crimson lower-face mask already have approved visual designs. Item names, gameplay bonuses, starting equipment, and rarity remain undecided.
 
-### Proposed starting equipment for discussion
+### Approved acquisition
+
+Davey chose one gear piece dropped by each floor's boss. The first five floors supply all five equipment slots before the sixth and final floor. The paired swords count as one reward. Reward order is undecided, but the five drops must complete the set without duplicate slots preventing completion. Earned gear lasts for the current run only, consistent with the agreed absence of meta-progression. Starting gear and collection/equipping behavior remain open.
+
+### Proposed boss equipment for discussion
 
 These names and effects are proposals, not approved features. Numerical values are deferred with the game's stats. The proposed bonuses support Visreal's innate skills rather than being required to unlock them.
 
@@ -85,4 +89,4 @@ These names and effects are proposals, not approved features. Numerical values a
 | Mask | Nightshade Wrap | Increase the damage dealt by poison. |
 | Trinket | Umbral Seal | Increase the shadow bonus damage on the slash empowered by Shadowstep. |
 
-These item names use the existing approved sword, armor, cape, and mask appearances. The trinket has no selected visual design. Whether this is a fixed starting loadout or equipment that can be replaced during a run remains to be chosen.
+These item names use the existing approved sword, armor, cape, and mask appearances. The trinket has no selected visual design. The earlier starting-loadout suggestion is superseded by the boss-drop progression above; these names and bonuses remain proposals for those rewards, with no floor assignments yet.
