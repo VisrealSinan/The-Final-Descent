@@ -1,0 +1,5 @@
+Use case: precise-object-edit.
+Asset type: Visreal character concept v3 for The Final Descent.
+Input image: visreal-v2.png is the edit target.
+Make ONE change only: extend the existing black cape with crimson lining so that its hanging lower hem reaches just above his ankles, about one boot-height longer than the current mid-calf cape. Keep its natural slightly billowing drape and subtly weathered split hem. Let the crimson lining remain clearly visible. Do not make the cape touch or pool on the ground.
+Preserve everything else exactly: the same character identity, crimson stitched cloth mask, beard under mask, face, eyes, ears, dark ponytail, black and crimson leather armor, proportions, pose, hands, two swords, boots, framing, neutral background, shadows, and hand-painted 2D style. Cape remains behind arms and swords. No new objects, symbols or text.

@@ -37,7 +37,7 @@ The human defines the game and approves major creative decisions. AI may refine 
 ## Tools used
 
 - ChatGPT / Codex: planning, design documentation, and repository setup.
-- Built-in OpenAI image generation: Visreal's first character concept.
+- Built-in OpenAI image generation: Visreal's character concepts and revisions.
 - Git and GitHub: version control and project hosting.
 
 Update this list as additional tools are actually used. The rules do not require a per-asset tool mapping.
