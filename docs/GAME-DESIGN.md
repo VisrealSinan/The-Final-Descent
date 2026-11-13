@@ -16,7 +16,8 @@ This file records decisions made by Davey. Suggestions are not approved features
 
 - Each floor has a boss. Boss encounters fit within the existing five-room-per-floor limit; their exact placement and encounter designs remain open.
 - Bosses drop one equipment piece per floor. The first five floors provide the five pieces needed to complete the hero's equipment before floor six.
-- The five rewards must cover all five equipment slots, rather than leave a slot missing through duplicate drops. Fixed versus randomized reward order remains to be decided.
+- Davey chose random reward order with no duplicates: the first five bosses each drop a different equipment slot, completing all five slots before floor six.
+- Implementation plan: shuffle the five reward slots once when a run starts and consume one entry for each of the first five boss rewards. A new run gets a fresh shuffle. This logic is not implemented yet.
 - Visreal's paired swords count as a single equipment reward for his paired-swords slot.
 - Floor six is the final floor, themed around something the selected class fears or dislikes. Davey explicitly deferred its detailed design.
 - The sixth boss's reward, the victory sequence, and whether Han and Ghalrym receive distinct final-floor variants despite both being Druids remain open. No specific fears, enemies, or final-floor mechanics have been chosen.
@@ -55,7 +56,7 @@ Davey chose shadow- and poison-powered melee and approved this kit:
 - **Venom Blades:** temporarily coats the swords so melee hits poison enemies, dealing damage over time.
 - **Nightshade:** a passive that gives shadow-empowered strikes extra damage against poisoned enemies.
 
-Davey also chose five equipment slots for Visreal: **paired swords, armor, cape, mask, and trinket**, with both swords occupying one slot as a set. Item names and bonuses are still proposals in [Visreal's character brief](characters/VISREAL.md#equipment). Equipment comes from the floor bosses as described above; skill bindings, poison stacking, timing, numerical balance, and reward order remain open. These mechanics are agreed design, not implemented gameplay.
+Davey also chose five equipment slots for Visreal: **paired swords, armor, cape, mask, and trinket**, with both swords occupying one slot as a set. Item names and bonuses are still proposals in [Visreal's character brief](characters/VISREAL.md#equipment). Equipment comes from the floor bosses in random order without duplicates as described above; skill bindings, poison stacking, timing, and numerical balance remain open. These mechanics are agreed design, not implemented gameplay.
 
 ### Ghalrym
 
@@ -71,7 +72,7 @@ A Druid who chooses bear form and enjoys being a caked-up bear. Davey approved t
 2. Han's gnome-styled bear concept v3 is approved, and its first Godot sprite pack is built.
 3. Ghalrym's human-faced catgirl v4 is the production reference, and its first Godot sprite pack is built.
 4. Visreal's shadow-and-poison starter kit and five equipment slots are approved. Define his equipment effects next; Han's and Ghalrym's skill kits remain open.
-5. Six floors and boss equipment drops are approved, with five pieces earned before the class-themed final floor. Detailed final-floor design is deferred at Davey's request.
+5. Six floors and boss equipment drops in random order without duplicates are approved, with five pieces earned before the class-themed final floor. Detailed final-floor design is deferred at Davey's request.
 6. Refine each character's gameplay after appearance and skills are settled.
 
 ## Decisions still open
@@ -79,7 +80,7 @@ A Druid who chooses bear form and enjoys being a caked-up bear. Davey approved t
 - Target platform and distribution method.
 - Diagonal aiming and special-ability bindings; movement, attack key groups, and hold-to-repeat are decided above.
 - Han's and Ghalrym's skills; all characters' cooldowns, resources, and numerical stats; Visreal's detailed poison behavior.
-- Equipment slots for Han and Ghalrym; item names and effects, reward order, starting gear, collection/equipping behavior, and any character-specific restrictions. Boss drops and Visreal's five slots are decided above.
+- Equipment slots for Han and Ghalrym; item names and effects, starting gear, collection/equipping behavior, and any character-specific restrictions. Boss drops, random reward order without duplicates, and Visreal's five slots are decided above.
 - Enemy and boss types, behavior, and difficulty scaling.
 - Room connections, floor layouts, the condition for descending, and victory presentation.
 - Floor-six fears/dislikes, class or character variants, encounter details, and its boss reward; deferred for later discussion.

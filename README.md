@@ -19,7 +19,7 @@ The agreed game loop is:
 3. Each floor contains five rooms: one enemy-free spawn room and four rooms with enemies, including a floor boss within that room count.
 4. Move and actively use class-based melee attacks. Enemy kills award XP.
 5. Leveling increases stats for the remainder of the run.
-6. Earn one equipment piece from each of the first five floor bosses, completing all five slots before floor six. The reward order remains to be chosen.
+6. Earn one equipment piece from each of the first five floor bosses in random order with no duplicates, completing all five slots before floor six. The reward order is randomized anew for each run.
 7. Face a sixth-floor challenge themed around something the selected class fears or dislikes; its details will be designed later.
 8. On death, use the game-over screen to return to the main menu or restart from floor one.
 

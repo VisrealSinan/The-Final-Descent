@@ -75,7 +75,7 @@ The swords, black-and-crimson leather armor, long cape, and crimson lower-face m
 
 ### Approved acquisition
 
-Davey chose one gear piece dropped by each floor's boss. The first five floors supply all five equipment slots before the sixth and final floor. The paired swords count as one reward. Reward order is undecided, but the five drops must complete the set without duplicate slots preventing completion. Earned gear lasts for the current run only, consistent with the agreed absence of meta-progression. Starting gear and collection/equipping behavior remain open.
+Davey chose one gear piece dropped by each floor's boss. The first five floors supply all five equipment slots before the sixth and final floor. The paired swords count as one reward. Davey selected random reward order with no duplicates: each boss on floors one through five awards a different slot, completing the set before floor six. The order is randomized anew for each run. Earned gear lasts for the current run only, consistent with the agreed absence of meta-progression. Starting gear and collection/equipping behavior remain open.
 
 ### Proposed boss equipment for discussion
 
@@ -89,4 +89,4 @@ These names and effects are proposals, not approved features. Numerical values a
 | Mask | Nightshade Wrap | Increase the damage dealt by poison. |
 | Trinket | Umbral Seal | Increase the shadow bonus damage on the slash empowered by Shadowstep. |
 
-These item names use the existing approved sword, armor, cape, and mask appearances. The trinket has no selected visual design. The earlier starting-loadout suggestion is superseded by the boss-drop progression above; these names and bonuses remain proposals for those rewards, with no floor assignments yet.
+These item names use the existing approved sword, armor, cape, and mask appearances. The trinket has no selected visual design. The earlier starting-loadout suggestion is superseded by the boss-drop progression above; these names and bonuses remain proposals for those rewards. Rewards have no fixed floor assignments because their order is randomized each run without duplicates.
