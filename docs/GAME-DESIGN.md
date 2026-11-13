@@ -28,17 +28,17 @@ A gamer who is naturally a Rogue. He has a darker, self-sacrificing side and is 
 
 ### Ghalrym
 
-A Druid who chooses cat form over all other forms and rests in it. He loves AI and anime cat girls, and would do anything to help his friends and save all the cat girls in the world. Appearance and skills are not yet defined.
+A Druid who chooses feline form over all other forms and rests in it. He loves AI and anime cat girls, and would do anything to help his friends and save all the cat girls in the world. Davey refined the visual direction to a catgirl druid form and requested a human face. See [Ghalrym's visual concepts](characters/GHALRYM.md). Visual review is ongoing; skills are not yet defined.
 
 ### Han
 
-A Druid who chooses bear form and enjoys being a caked-up bear. Davey requested a more gnome-styled appearance. See [Han's visual proposals](characters/HAN.md). Skills are not yet defined.
+A Druid who chooses bear form and enjoys being a caked-up bear. Davey approved the gnome-styled v3 concept. See [Han's approved visual reference](characters/HAN.md). Skills are not yet defined.
 
 ## Design sequence
 
 1. Visreal's appearance and initial Godot sprite pack are approved.
-2. Current focus, at Davey's request: Han's visuals, with a gnome-styled bear direction.
-3. Ghalrym's visuals and all character skill kits remain to be defined with Davey.
+2. Han's gnome-styled bear concept v3 is approved; its sprite pack remains to be built.
+3. Current focus: Ghalrym's catgirl druid visuals, with a human face. All character skill kits remain to be defined with Davey.
 4. Refine each character's gameplay after appearance and skills are settled.
 
 ## Decisions still open
@@ -55,4 +55,4 @@ Earlier assistant suggestions such as shadow rescue, healing purrs, an AI compan
 
 Davey supplies the creative direction. AI can make routine implementation decisions within agreed scope. Major unresolved design decisions and scope expansion go back to Davey. Overnight tasks must be human-defined and approved.
 
-Completed work: repository setup and a Godot-ready Visreal sprite pack with import resources and animation preview. Current agreed work: develop Han's visuals from Davey's bear-form, caked-up, and gnome-styled direction. This is not authorization to invent all remaining game systems.
+Completed work: repository setup, a Godot-ready Visreal sprite pack with import resources and animation preview, and Han's approved visual concept. Current agreed work: develop Ghalrym's catgirl druid visuals with a human face following Davey's corrections. This is not authorization to invent all remaining game systems.

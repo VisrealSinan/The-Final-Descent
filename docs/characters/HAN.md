@@ -9,13 +9,13 @@
 - After seeing the first bear concept, Davey requested a more gnome-styled design.
 - After v2, Davey asked for a still more gnome-looking bear to better fit Han's personality.
 
-## Latest proposal: v3, awaiting review
+## Approved concept: v3
 
 ![Han v3: stronger gnome facial features and compact bear body](../../assets/concepts/han-v3.png)
 
 The third concept emphasizes gnome facial structure: an oversized head, prominent round nose, large sideways-pointing ears, curled handlebar mustache, thick forked cream beard, and expressive eyebrows. It keeps the compact four-legged bear body, broad furry haunches, goggles, moss-green wraps, and gear-and-leaf harness. Two views show the front and rear silhouette. A small correction removed extra round bear ears from the draft so the final design has one pair of ears.
 
-The goggles, exact proportions, fur/eye colors, pouch, facial fur, and accessory designs are proposed details, not individually specified by Davey. The bear remains in bear form; no humanoid form or mechanical abilities are implied. Awaiting review before making Han's animation sheets.
+Davey approved v3 as perfect and moved on to Ghalrym's visuals. This is Han's approved visual reference, including its proportions, facial features, colors, and accessories. The bear remains in bear form; no humanoid form or mechanical abilities are implied.
 
 Created with built-in OpenAI image generation. [Exact v3 edit prompt](HAN-CONCEPT-V3-PROMPT.txt) and [anatomy correction prompt](HAN-CONCEPT-V3-CORRECTION.txt).
 
@@ -27,4 +27,4 @@ Created with built-in OpenAI image generation. [Exact v3 edit prompt](HAN-CONCEP
 
 ## Assets and skills
 
-Once the visual design is settled, use the same delivery approach as Visreal: complete transparent sprite sheets with Godot import resources, rather than loose poses requiring later assembly. Han's skills, stats, combat behavior, and animation requirements are not yet defined.
+The visual design is approved. When preparing Han's game assets, use the same delivery approach as Visreal: complete transparent sprite sheets with Godot import resources, rather than loose poses requiring later assembly. Han's skills, stats, combat behavior, and animation requirements are not yet defined; no Han sprite pack has been built yet.

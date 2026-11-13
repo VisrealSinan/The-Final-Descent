@@ -28,9 +28,10 @@ There is no progression between runs in the initial version. Enemies, skills, st
 - [Agreed game design](docs/GAME-DESIGN.md)
 - [Visreal character brief](docs/characters/VISREAL.md)
 - [Han character brief and concepts](docs/characters/HAN.md)
+- [Ghalrym character brief and concepts](docs/characters/GHALRYM.md)
 - [Official hackathon rules](Hackathon-Official-Rules.md)
 
-Visreal's appearance and first sprite pack are approved. Han's visuals are next at Davey's request. Ghalrym's visuals and character skills remain to be defined before refining gameplay.
+Visreal's appearance and first sprite pack are approved. Han's gnome-bear concept v3 is approved. Ghalrym's catgirl druid visuals are being refined. Character skills remain to be defined before refining gameplay.
 
 ## Hackathon window
 
@@ -42,7 +43,7 @@ The human defines the game and approves major creative decisions. AI may refine 
 ## Tools used
 
 - ChatGPT / Codex: planning, design documentation, and repository setup.
-- Built-in OpenAI image generation: character concepts and revisions for Visreal and Han, plus Visreal's transparent sprite sheets.
+- Built-in OpenAI image generation: character concepts and revisions for Visreal, Han, and Ghalrym, plus Visreal's transparent sprite sheets.
 - Godot 4.7.2: sprite resources, preview rendering, and import/playback validation.
 - Git and GitHub: version control and project hosting.
 
