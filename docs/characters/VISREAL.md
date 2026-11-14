@@ -71,22 +71,24 @@ The intended combo is Venom Blades, melee hits to poison the enemy, then Shadows
 
 Davey chose five equipment slots for Visreal: **paired swords, armor, cape, mask, and trinket**. The paired swords occupy one slot as a set. This replaces the earlier three-slot suggestion. Equipment rules for Han and Ghalrym are not decided by this choice.
 
-The swords, black-and-crimson leather armor, long cape, and crimson lower-face mask already have approved visual designs. Item names, gameplay bonuses, starting equipment, and rarity remain undecided.
+The swords, black-and-crimson leather armor, long cape, and crimson lower-face mask already have approved visual designs. Davey chose poison and shadow damage for the paired swords' equipment effect. Item names, the other equipment bonuses, starting equipment, and rarity remain undecided.
 
 ### Approved acquisition
 
 Davey chose one gear piece dropped by each floor's boss. The first five floors supply all five equipment slots before the sixth and final floor. The paired swords count as one reward. Davey selected random reward order with no duplicates: each boss on floors one through five awards a different slot, completing the set before floor six. The order is randomized anew for each run. Earned gear lasts for the current run only, consistent with the agreed absence of meta-progression. Starting gear and collection/equipping behavior remain open.
 
-### Proposed boss equipment for discussion
+### Boss equipment effects
 
-These names and effects are proposals, not approved features. Numerical values are deferred with the game's stats. The proposed bonuses support Visreal's innate skills rather than being required to unlock them.
+The paired swords' effect is approved; item names and the other four effects remain proposals. Numerical values are deferred with the game's stats. The proposed equipment model supports Visreal's innate skills rather than being required to unlock them.
 
-| Slot | Proposed item | Proposed effect |
-| --- | --- | --- |
-| Paired swords | Duskfang & Venomfang | Increase melee hit damage. |
-| Armor | Crimsonhide Leathers | Reduce incoming damage. |
-| Cape | Longcloak of the Veil | Reduce Shadowstep's cooldown. |
-| Mask | Nightshade Wrap | Increase the damage dealt by poison. |
-| Trinket | Umbral Seal | Increase the shadow bonus damage on the slash empowered by Shadowstep. |
+| Slot | Proposed item name | Effect | Effect status |
+| --- | --- | --- | --- |
+| Paired swords | Duskfang & Venomfang | Deal poison and shadow damage through melee hits, replacing the proposed generic melee-damage increase. | Approved by Davey |
+| Armor | Crimsonhide Leathers | Reduce incoming damage. | Proposed |
+| Cape | Longcloak of the Veil | Reduce Shadowstep's cooldown. | Proposed |
+| Mask | Nightshade Wrap | Increase the damage dealt by poison. | Proposed |
+| Trinket | Umbral Seal | Increase the shadow bonus damage on the slash empowered by Shadowstep. | Proposed |
 
-These item names use the existing approved sword, armor, cape, and mask appearances. The trinket has no selected visual design. The earlier starting-loadout suggestion is superseded by the boss-drop progression above; these names and bonuses remain proposals for those rewards. Rewards have no fixed floor assignments because their order is randomized each run without duplicates.
+The paired blades remain melee weapons. Exact damage values, distribution between the two blades, whether the equipment's poison is immediate damage or a damage-over-time status, and its interaction with Venom Blades and Nightshade remain to be defined. The approved skill kit is unchanged; this equipment decision does not automatically grant every basic hit Nightshade's conditional bonus.
+
+These item names use the existing approved sword, armor, cape, and mask appearances. The trinket has no selected visual design. The earlier starting-loadout suggestion is superseded by the boss-drop progression above; the table distinguishes the approved weapon effect from the remaining proposals. Rewards have no fixed floor assignments because their order is randomized each run without duplicates. Equipment gameplay is not implemented yet.

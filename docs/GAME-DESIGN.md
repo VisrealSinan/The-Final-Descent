@@ -21,7 +21,7 @@ This file records decisions made by Davey. Suggestions are not approved features
 - Visreal's paired swords count as a single equipment reward for his paired-swords slot.
 - Floor six is the final floor, themed around something the selected class fears or dislikes. Davey explicitly deferred its detailed design.
 - The sixth boss's reward, the victory sequence, and whether Han and Ghalrym receive distinct final-floor variants despite both being Druids remain open. No specific fears, enemies, or final-floor mechanics have been chosen.
-- Starting equipment, reward collection/equipping behavior, and item names and bonuses remain open. These decisions do not remove the characters' approved visual outfits or weapons.
+- Starting equipment, reward collection/equipping behavior, and item names remain open. Visreal's paired-swords effect is approved below; other equipment bonuses remain proposals. These decisions do not remove the characters' approved visual outfits or weapons.
 
 ## Chosen gameplay controls
 
@@ -56,7 +56,7 @@ Davey chose shadow- and poison-powered melee and approved this kit:
 - **Venom Blades:** temporarily coats the swords so melee hits poison enemies, dealing damage over time.
 - **Nightshade:** a passive that gives shadow-empowered strikes extra damage against poisoned enemies.
 
-Davey also chose five equipment slots for Visreal: **paired swords, armor, cape, mask, and trinket**, with both swords occupying one slot as a set. Item names and bonuses are still proposals in [Visreal's character brief](characters/VISREAL.md#equipment). Equipment comes from the floor bosses in random order without duplicates as described above; skill bindings, poison stacking, timing, and numerical balance remain open. These mechanics are agreed design, not implemented gameplay.
+Davey also chose five equipment slots for Visreal: **paired swords, armor, cape, mask, and trinket**, with both swords occupying one slot as a set. He chose **poison and shadow damage through melee hits** for the paired swords, replacing the proposed generic melee-damage bonus. Item names and the other equipment bonuses remain proposals in [Visreal's character brief](characters/VISREAL.md#equipment). Equipment comes from the floor bosses in random order without duplicates as described above; skill bindings, poison behavior and stacking, equipment interactions with Venom Blades and Nightshade, timing, and numerical balance remain open. These mechanics are agreed design, not implemented gameplay.
 
 ### Ghalrym
 
@@ -71,7 +71,7 @@ A Druid who chooses bear form and enjoys being a caked-up bear. Davey approved t
 1. Visreal's appearance and initial Godot sprite pack are approved.
 2. Han's gnome-styled bear concept v3 is approved, and its first Godot sprite pack is built.
 3. Ghalrym's human-faced catgirl v4 is the production reference, and its first Godot sprite pack is built.
-4. Visreal's shadow-and-poison starter kit and five equipment slots are approved. Define his equipment effects next; Han's and Ghalrym's skill kits remain open.
+4. Visreal's shadow-and-poison starter kit, five equipment slots, and paired swords' poison-and-shadow damage effect are approved. Define his remaining equipment effects next; Han's and Ghalrym's skill kits remain open.
 5. Six floors and boss equipment drops in random order without duplicates are approved, with five pieces earned before the class-themed final floor. Detailed final-floor design is deferred at Davey's request.
 6. Refine each character's gameplay after appearance and skills are settled.
 

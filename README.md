@@ -33,7 +33,7 @@ There is no progression between runs in the initial version; earned equipment re
 - [Ghalrym character brief and concepts](docs/characters/GHALRYM.md)
 - [Official hackathon rules](Hackathon-Official-Rules.md)
 
-Visreal's appearance, first sprite pack, and skill kit are approved: **Twin Slashes, Shadowstep, Venom Blades, and Nightshade**. His five equipment slots are **paired swords, armor, cape, mask, and trinket**; item effects are being designed. These gameplay systems are not implemented yet. Han's gnome-bear v3 and Ghalrym's human-faced catgirl v4 are the chosen references for their new sprite packs; their skills remain open.
+Visreal's appearance, first sprite pack, and skill kit are approved: **Twin Slashes, Shadowstep, Venom Blades, and Nightshade**. His five equipment slots are **paired swords, armor, cape, mask, and trinket**. His paired swords will deal poison and shadow damage through melee hits; other item effects are being designed. These gameplay systems are not implemented yet. Han's gnome-bear v3 and Ghalrym's human-faced catgirl v4 are the chosen references for their new sprite packs; their skills remain open.
 
 ## Hackathon window
 
