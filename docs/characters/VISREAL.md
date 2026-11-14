@@ -71,7 +71,7 @@ The intended combo is Venom Blades, melee hits to poison the enemy, then Shadows
 
 Davey chose five equipment slots for Visreal: **paired swords, armor, cape, mask, and trinket**. The paired swords occupy one slot as a set. This replaces the earlier three-slot suggestion. Equipment rules for Han and Ghalrym are not decided by this choice.
 
-The swords, black-and-crimson leather armor, long cape, and crimson lower-face mask already have approved visual designs. Davey chose poison and shadow damage for the paired swords' equipment effect. Item names, the other equipment bonuses, starting equipment, and rarity remain undecided.
+The swords, black-and-crimson leather armor, long cape, and crimson lower-face mask already have approved visual designs. Davey chose poison and shadow damage for the paired swords' equipment effect and approved the other four equipment effects below. Item names, starting equipment, and rarity remain undecided.
 
 ### Approved acquisition
 
@@ -79,16 +79,16 @@ Davey chose one gear piece dropped by each floor's boss. The first five floors s
 
 ### Boss equipment effects
 
-The paired swords' effect is approved; item names and the other four effects remain proposals. Numerical values are deferred with the game's stats. The proposed equipment model supports Visreal's innate skills rather than being required to unlock them.
+All five equipment effects are approved. After choosing the paired swords' effect, Davey accepted the armor, cape, mask, and trinket effects with "that looks alright." Item names remain working proposals. Davey explicitly deferred numerical balance: damage amounts, reductions, cooldowns, durations, and percentages will be worked out later during playtesting. The proposed equipment model supports Visreal's innate skills rather than being required to unlock them.
 
 | Slot | Proposed item name | Effect | Effect status |
 | --- | --- | --- | --- |
 | Paired swords | Duskfang & Venomfang | Deal poison and shadow damage through melee hits, replacing the proposed generic melee-damage increase. | Approved by Davey |
-| Armor | Crimsonhide Leathers | Reduce incoming damage. | Proposed |
-| Cape | Longcloak of the Veil | Reduce Shadowstep's cooldown. | Proposed |
-| Mask | Nightshade Wrap | Increase the damage dealt by poison. | Proposed |
-| Trinket | Umbral Seal | Increase the shadow bonus damage on the slash empowered by Shadowstep. | Proposed |
+| Armor | Crimsonhide Leathers | Reduce incoming damage. | Approved by Davey |
+| Cape | Longcloak of the Veil | Reduce Shadowstep's cooldown. | Approved by Davey |
+| Mask | Nightshade Wrap | Increase the damage dealt by poison. | Approved by Davey |
+| Trinket | Umbral Seal | Increase the shadow bonus damage on the slash empowered by Shadowstep. | Approved by Davey |
 
 The paired blades remain melee weapons. Exact damage values, distribution between the two blades, whether the equipment's poison is immediate damage or a damage-over-time status, and its interaction with Venom Blades and Nightshade remain to be defined. The approved skill kit is unchanged; this equipment decision does not automatically grant every basic hit Nightshade's conditional bonus.
 
-These item names use the existing approved sword, armor, cape, and mask appearances. The trinket has no selected visual design. The earlier starting-loadout suggestion is superseded by the boss-drop progression above; the table distinguishes the approved weapon effect from the remaining proposals. Rewards have no fixed floor assignments because their order is randomized each run without duplicates. Equipment gameplay is not implemented yet.
+These item names use the existing approved sword, armor, cape, and mask appearances. The trinket has no selected visual design. The earlier starting-loadout suggestion is superseded by the boss-drop progression above. Rewards have no fixed floor assignments because their order is randomized each run without duplicates. Equipment gameplay is not implemented yet.

@@ -21,7 +21,7 @@ This file records decisions made by Davey. Suggestions are not approved features
 - Visreal's paired swords count as a single equipment reward for his paired-swords slot.
 - Floor six is the final floor, themed around something the selected class fears or dislikes. Davey explicitly deferred its detailed design.
 - The sixth boss's reward, the victory sequence, and whether Han and Ghalrym receive distinct final-floor variants despite both being Druids remain open. No specific fears, enemies, or final-floor mechanics have been chosen.
-- Starting equipment, reward collection/equipping behavior, and item names remain open. Visreal's paired-swords effect is approved below; other equipment bonuses remain proposals. These decisions do not remove the characters' approved visual outfits or weapons.
+- Starting equipment, reward collection/equipping behavior, and item names remain open. All five of Visreal's equipment effects are approved below; Han's and Ghalrym's equipment effects remain open. These decisions do not remove the characters' approved visual outfits or weapons.
 
 ## Chosen gameplay controls
 
@@ -56,7 +56,15 @@ Davey chose shadow- and poison-powered melee and approved this kit:
 - **Venom Blades:** temporarily coats the swords so melee hits poison enemies, dealing damage over time.
 - **Nightshade:** a passive that gives shadow-empowered strikes extra damage against poisoned enemies.
 
-Davey also chose five equipment slots for Visreal: **paired swords, armor, cape, mask, and trinket**, with both swords occupying one slot as a set. He chose **poison and shadow damage through melee hits** for the paired swords, replacing the proposed generic melee-damage bonus. Item names and the other equipment bonuses remain proposals in [Visreal's character brief](characters/VISREAL.md#equipment). Equipment comes from the floor bosses in random order without duplicates as described above; skill bindings, poison behavior and stacking, equipment interactions with Venom Blades and Nightshade, timing, and numerical balance remain open. These mechanics are agreed design, not implemented gameplay.
+Davey also chose five equipment slots for Visreal, with both swords occupying one slot as a set, and approved all five effects:
+
+- **Paired swords:** poison and shadow damage through melee hits, replacing the proposed generic melee-damage bonus.
+- **Armor:** reduced incoming damage.
+- **Cape:** reduced Shadowstep cooldown.
+- **Mask:** increased poison damage.
+- **Trinket:** increased shadow bonus damage on the slash empowered by Shadowstep.
+
+Item names remain working proposals in [Visreal's character brief](characters/VISREAL.md#equipment). Equipment comes from the floor bosses in random order without duplicates as described above. Skill bindings, poison behavior and stacking, and equipment interactions with Venom Blades and Nightshade remain open. Davey explicitly deferred numerical balance until later; damage values, cooldowns, durations, and percentages will be tuned during playtesting. These mechanics are agreed design, not implemented gameplay.
 
 ### Ghalrym
 
@@ -71,7 +79,7 @@ A Druid who chooses bear form and enjoys being a caked-up bear. Davey approved t
 1. Visreal's appearance and initial Godot sprite pack are approved.
 2. Han's gnome-styled bear concept v3 is approved, and its first Godot sprite pack is built.
 3. Ghalrym's human-faced catgirl v4 is the production reference, and its first Godot sprite pack is built.
-4. Visreal's shadow-and-poison starter kit, five equipment slots, and paired swords' poison-and-shadow damage effect are approved. Define his remaining equipment effects next; Han's and Ghalrym's skill kits remain open.
+4. Visreal's shadow-and-poison starter kit, five equipment slots, and all five equipment effects are approved. Numerical balance is deferred; Han's and Ghalrym's skill kits and equipment remain open.
 5. Six floors and boss equipment drops in random order without duplicates are approved, with five pieces earned before the class-themed final floor. Detailed final-floor design is deferred at Davey's request.
 6. Refine each character's gameplay after appearance and skills are settled.
 
@@ -80,7 +88,7 @@ A Druid who chooses bear form and enjoys being a caked-up bear. Davey approved t
 - Target platform and distribution method.
 - Diagonal aiming and special-ability bindings; movement, attack key groups, and hold-to-repeat are decided above.
 - Han's and Ghalrym's skills; all characters' cooldowns, resources, and numerical stats; Visreal's detailed poison behavior.
-- Equipment slots for Han and Ghalrym; item names and effects, starting gear, collection/equipping behavior, and any character-specific restrictions. Boss drops, random reward order without duplicates, and Visreal's five slots are decided above.
+- Equipment slots and effects for Han and Ghalrym; item names, starting gear, collection/equipping behavior, and any character-specific restrictions. Boss drops, random reward order without duplicates, and Visreal's five slots and effects are decided above.
 - Enemy and boss types, behavior, and difficulty scaling.
 - Room connections, floor layouts, the condition for descending, and victory presentation.
 - Floor-six fears/dislikes, class or character variants, encounter details, and its boss reward; deferred for later discussion.
@@ -94,4 +102,4 @@ Davey supplies the creative direction. AI can make routine implementation decisi
 
 Completed work: repository setup, character concepts, and first Godot-ready sprite packs for Visreal, Han, and Ghalrym with import resources and a shared animation preview. Davey explicitly requested Han and Ghalrym's sprite sheets after the visual revisions. This is not authorization to invent all remaining game systems.
 
-Next requested design work: Visreal's equipment names and effects, following approval of his skill kit and equipment slots. Basic movement, melee hit detection, and combat have not yet been implemented. A small playable combat test is the next proposed implementation milestone; full dungeon and progression implementation remain later work.
+Visreal's skill kit and equipment effects are now approved, with numerical balance explicitly deferred. Basic movement, melee hit detection, and combat have not yet been implemented. A small playable combat test is the next proposed implementation milestone to evaluate these mechanics; full dungeon and progression implementation remain later work. Han's and Ghalrym's kits and equipment are still open design work.
