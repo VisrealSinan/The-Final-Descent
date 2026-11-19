@@ -6,7 +6,7 @@ Davey requested a playable Visreal combat prototype using the agreed movement, a
 
 On Windows x64, extract `deliverables/visreal-combat-prototype-windows.zip` and open `TheFinalDescent.exe`. Keep the adjacent `.pck` file. The package includes the runtime, so no Godot installation is needed. The unpacked local build is also available in `builds/visreal-prototype/`.
 
-From source, import `project.godot` in Godot 4.7.2 and press F5. The character animation viewer is still available by opening `previews/characters_preview.tscn` and pressing F6.
+To play this older practice mode from source, open `game/combat.tscn` in Godot 4.7.2 and press F6. F5 now plays the six-floor dungeon. The character animation viewer is still available by opening `previews/characters_preview.tscn` and pressing F6.
 
 | Control | Action |
 | --- | --- |
@@ -67,7 +67,7 @@ Run the integration checks with the Godot console executable:
 
 The combat suite checks physical-key input, normalized movement, independent and diagonal aim, melee direction/range, hold-to-repeat, dash collisions/cooldowns, poison timing/refresh/expiration, Nightshade, every gear effect, enemy windup/dodging/damage, all five boss rewards, pause, death and restart. It also tests fresh reward permutations across 20 new runs. It has been run against both source and the standalone package. Rendered output was inspected using `tools/capture_combat.gd`.
 
-To rebuild the Windows ZIP:
+The current Windows packaging command builds the six-floor dungeon. To rebuild it:
 
 ```powershell
 ./tools/package_windows.ps1 -GodotPath 'C:/path/to/Godot_v4.7.2-stable_win64_console.exe'
@@ -77,4 +77,4 @@ The packaging script uses an explicit runtime dependency list and bundles the in
 
 ## Remaining work
 
-Han and Ghalrym are visual assets only. The prototype has no XP/leveling, six-floor layout, class-themed finale, audio, or final enemy designs. Those systems have not been represented as completed by this build.
+Han and Ghalrym are visual assets only. The prototype has no XP/leveling, six-floor layout, class-themed finale, audio, or final enemy designs. The separate dungeon scene now implements six floors, run XP and Visreal’s finale.

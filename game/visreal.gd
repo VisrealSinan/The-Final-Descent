@@ -8,6 +8,8 @@ const T = preload("res://game/tuning.gd")
 const VISUAL = preload("res://assets/characters/visreal/visreal_visual.tscn")
 
 var health := T.MAX_HEALTH
+var max_health := T.MAX_HEALTH
+var melee_bonus := 0.0
 var gear: Array[String] = []
 var aim := Vector2.DOWN
 var active := false
@@ -117,6 +119,7 @@ func resolve_attack() -> void:
 		if difference.length() > radius and attack_direction.dot(difference.normalized()) < cos(T.ATTACK_HALF_ANGLE):
 			continue
 		var payload: Dictionary = T.hit(gear, attack_empowered, attack_coated, target.poison_left > 0.0)
+		payload.physical += melee_bonus
 		target.receive_hit(payload, attack_direction)
 		hit_landed.emit(target.global_position, payload)
 
@@ -166,7 +169,7 @@ func equip(slot: String) -> void:
 		gear.append(slot)
 
 func prepare_bout() -> void:
-	health = T.MAX_HEALTH
+	health = max_health
 	shadow_cooldown = 0.0
 	venom_cooldown = 0.0
 	venom_left = 0.0

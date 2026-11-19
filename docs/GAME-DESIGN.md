@@ -10,17 +10,17 @@ This file records decisions made by Davey. Suggestions are not approved features
 - A run spans six floors. Davey replaced the earlier endless-survival direction with a defined six-floor descent.
 - Exactly five rooms per floor: an enemy-free spawn room plus four rooms containing enemies.
 - Dark fantasy, World of Warcraft-inspired parody art direction.
-- Engine: Godot, selected by Davey. A playable Visreal combat prototype now accompanies the character asset preview; the full dungeon crawler remains in development.
+- Engine: Godot, selected by Davey. The default game scene is Visreal's six-floor dungeon. The original combat practice scene remains available.
 
 ## Floors and boss rewards
 
-- Each floor has a boss. Boss encounters fit within the existing five-room-per-floor limit; their exact placement and encounter designs remain open.
+- Each floor has a boss. The current layout puts the guardian in the fifth room.
 - Bosses drop one equipment piece per floor. The first five floors provide the five pieces needed to complete the hero's equipment before floor six.
 - Davey chose random reward order with no duplicates: the first five bosses each drop a different equipment slot, completing all five slots before floor six.
-- Implemented in the combat prototype: shuffle the five reward slots once when a run starts and consume one entry for each of the first five guardian rewards. A new run gets a fresh shuffle. Dungeon floors themselves are not implemented yet.
+- Implemented in the combat prototype: shuffle the five reward slots once when a run starts and consume one entry for each of the first five guardian rewards. A new run gets a fresh shuffle. The dungeon uses the same shuffle for guardians on floors one to five.
 - Visreal's paired swords count as a single equipment reward for his paired-swords slot.
-- Floor six is the final floor, themed around something the selected class fears or dislikes. Davey explicitly deferred its detailed design.
-- The sixth boss's reward, the victory sequence, and whether Han and Ghalrym receive distinct final-floor variants despite both being Druids remain open. No specific fears, enemies, or final-floor mechanics have been chosen.
+- Floor six is the final floor, themed around something the selected class fears or dislikes. Davey selected a rogue's fear of being exposed for Visreal.
+- Visreal faces moving searchlights and The Witness in the Unblinking Court. Clearing the last sanctum wins the run. Han’s and Ghalrym’s final floors remain open.
 - Starting equipment, reward collection/equipping behavior, and item names remain open. All five of Visreal's equipment effects are approved below; Han's and Ghalrym's equipment effects remain open. These decisions do not remove the characters' approved visual outfits or weapons.
 
 ## Chosen gameplay controls
@@ -41,7 +41,7 @@ This file records decisions made by Davey. Suggestions are not approved features
 - No outside meta-progression in the initial version.
 - Equipment earned during a run does not carry into a new run.
 - Death leads to a game-over screen with options to return to the main menu or restart from floor one.
-- Stat definitions, values, XP curves, and level-up details will be defined later.
+- For playtesting, levels increase maximum health and melee damage. Values and the XP curve are temporary.
 
 ## Characters
 
@@ -80,7 +80,7 @@ A Druid who chooses bear form and enjoys being a caked-up bear. Davey approved t
 2. Han's gnome-styled bear concept v3 is approved, and its first Godot sprite pack is built.
 3. Ghalrym's human-faced catgirl v4 is the production reference, and its first Godot sprite pack is built.
 4. Visreal's shadow-and-poison starter kit, five equipment slots, and all five equipment effects are approved. Numerical balance is deferred; Han's and Ghalrym's skill kits and equipment remain open.
-5. Six floors and boss equipment drops in random order without duplicates are approved, with five pieces earned before the class-themed final floor. Detailed final-floor design is deferred at Davey's request.
+5. Six floors and boss equipment drops in random order without duplicates are approved, with five pieces earned before the class-themed final floor. Davey chose exposure as Visreal's fear.
 6. Refine each character's gameplay after appearance and skills are settled.
 
 ## Decisions still open
@@ -90,8 +90,8 @@ A Druid who chooses bear form and enjoys being a caked-up bear. Davey approved t
 - Han's and Ghalrym's skills; final cooldowns, resources, and numerical stats; review of Visreal's provisional poison interactions after playtesting.
 - Equipment slots and effects for Han and Ghalrym; item names, starting gear, collection/equipping behavior, and any character-specific restrictions. Boss drops, random reward order without duplicates, and Visreal's five slots and effects are decided above.
 - Enemy and boss types, behavior, and difficulty scaling.
-- Room connections, floor layouts, the condition for descending, and victory presentation.
-- Floor-six fears/dislikes, class or character variants, encounter details, and its boss reward; deferred for later discussion.
+- Playtest the six connected-room layouts, stairs and victory screen.
+- Floor-six encounters for the two Druids.
 - Specific art treatment, animation requirements, audio, and UI details.
 
 Earlier assistant suggestions such as shadow rescue, healing purrs, an AI companion, and cheek quake are unapproved ideas, not requirements.
@@ -102,4 +102,4 @@ Davey supplies the creative direction. AI can make routine implementation decisi
 
 Completed work: repository setup, character concepts, Godot-ready sprite packs and a shared animation preview for all three characters, plus the playable Visreal combat prototype and Windows package. Davey explicitly requested the prototype using the agreed movement, attacks, skills, equipment, and temporary numbers. The test chamber, placeholder melee enemies, damage feedback, HUD, reward flow, pause/restart and automated checks support that request.
 
-The prototype now implements Visreal's movement, directional melee, approved skills and equipment effects, enemy attacks, five nonduplicate boss rewards, game-over/restart, and full-kit sparring. Its five fights are a test sequence, not the dungeon's floor layout. All temporary implementation choices and balance values are documented in [COMBAT-PROTOTYPE.md](COMBAT-PROTOTYPE.md). Full dungeon/XP progression, final enemies, Han's and Ghalrym's kits/equipment, and the class-themed finale remain later work.
+The playable dungeon uses six fixed routes, one safe refuge per floor, stairs after each of the first five sanctums, and victory in the sixth. Gates reopen after combat and cleared rooms stay empty. Each new refuge restores health and cooldowns. XP, levels and equipped rewards persist until a new run. Room routes, guardian names, searchlight timing, healing and stat values are working choices for playtesting.

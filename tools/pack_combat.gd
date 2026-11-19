@@ -2,7 +2,7 @@ extends SceneTree
 ## Packs only runtime dependencies, excluding concepts, credentials and unrelated files.
 
 func _initialize() -> void:
-	var destination := "res://builds/visreal-prototype/TheFinalDescent.pck"
+	var destination := "res://builds/dungeon/TheFinalDescent.pck"
 	var packer := PCKPacker.new()
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(destination.get_base_dir()))
 	if packer.pck_start(ProjectSettings.globalize_path(destination)) != OK:

@@ -6,8 +6,8 @@ param(
 $ErrorActionPreference = 'Stop'
 $projectRoot = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '..')).Path
 $enginePath = (Resolve-Path -LiteralPath $GodotPath).Path
-$outputPath = Join-Path $projectRoot 'builds/visreal-prototype'
-$archivePath = Join-Path $projectRoot 'deliverables/visreal-combat-prototype-windows.zip'
+$outputPath = Join-Path $projectRoot 'builds/dungeon'
+$archivePath = Join-Path $projectRoot 'deliverables/the-final-descent-windows.zip'
 
 New-Item -ItemType Directory -Path $outputPath -Force | Out-Null
 New-Item -ItemType Directory -Path (Split-Path -Parent $archivePath) -Force | Out-Null
@@ -20,7 +20,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Godot packaging failed.' }
 # Use the installed runtime to avoid requiring export templates on this machine.
 $guiEngine = $enginePath -replace '_console\.exe$', '.exe'
 Copy-Item -LiteralPath $guiEngine -Destination (Join-Path $outputPath 'TheFinalDescent.exe') -Force
-Copy-Item -LiteralPath (Join-Path $projectRoot 'docs/PLAY-PROTOTYPE.txt') -Destination (Join-Path $outputPath 'READ-ME-FIRST.txt') -Force
+Copy-Item -LiteralPath (Join-Path $projectRoot 'docs/PLAY-DUNGEON.txt') -Destination (Join-Path $outputPath 'READ-ME-FIRST.txt') -Force
 Copy-Item -LiteralPath (Join-Path $projectRoot 'docs/GODOT-LICENSE.txt') -Destination (Join-Path $outputPath 'GODOT-LICENSE.txt') -Force
 Copy-Item -LiteralPath (Join-Path $projectRoot 'Hackathon-Official-Rules.md') -Destination $outputPath -Force
 Compress-Archive -LiteralPath @(

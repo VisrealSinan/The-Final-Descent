@@ -24,6 +24,8 @@ var notice_left := 0.0
 var floats: Array[Dictionary] = []
 var motes_clock := 0.0
 var ui: Control
+var place_label: Label
+var objective_label: Label
 var health_bar: ProgressBar
 var health_label: Label
 var round_label: Label
@@ -112,14 +114,7 @@ func start_bout() -> void:
 	var positions := [Vector2(760, 440), Vector2(700, 650), Vector2(510, 300)]
 	enemies_remaining = positions.size()
 	for i in positions.size():
-		var enemy := Enemy.new()
-		enemy.position = positions[i]
-		enemy.guardian = i == 0
-		enemy.tier = mini(bout, 5)
-		enemy.player = player
-		enemy.defeated.connect(on_enemy_defeated)
-		enemy.damaged.connect(add_damage_number)
-		actors.add_child(enemy)
+		spawn_enemy(positions[i], i == 0, mini(bout, 5))
 	set_notice("E: coat blades  >  slash to poison  >  Q: Shadowstep  >  slash for Nightshade", 5.0)
 	update_hud()
 
@@ -136,6 +131,16 @@ func on_enemy_defeated(enemy: Node2D) -> void:
 			set_notice("EQUIPPED  /  " + T.ITEM_NAMES[last_reward] + "  /  " + T.ITEM_EFFECTS[last_reward], 6.0)
 	if enemies_remaining == 0:
 		finish_bout()
+
+func spawn_enemy(at: Vector2, guardian: bool, tier: int) -> void:
+	var enemy := Enemy.new()
+	enemy.position = at
+	enemy.guardian = guardian
+	enemy.tier = tier
+	enemy.player = player
+	enemy.defeated.connect(on_enemy_defeated)
+	enemy.damaged.connect(add_damage_number)
+	actors.add_child(enemy)
 
 func finish_bout() -> void:
 	player.active = false
@@ -279,8 +284,8 @@ func create_ui() -> void:
 	ui.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	layer.add_child(ui)
 	label(ui, "THE FINAL DESCENT", Rect2(36, 23, 800, 42), 32, INK)
-	label(ui, "VISREAL   /   THE VEIL CHAMBER", Rect2(38, 73, 700, 28), 17, GOLD)
-	label(ui, "COMBAT PROTOTYPE  ·  temporary balance", Rect2(38, 107, 750, 25), 14, MUTED)
+	place_label = label(ui, "VISREAL   /   THE VEIL CHAMBER", Rect2(38, 73, 700, 28), 17, GOLD)
+	objective_label = label(ui, "COMBAT PROTOTYPE  ·  temporary balance", Rect2(38, 107, 640, 25), 14, MUTED)
 	button(ui, "Pause  [Esc]", Rect2(1090, 54, 154, 38), toggle_pause)
 	round_label = label(ui, "", Rect2(690, 76, 265, 24), 17, INK)
 	round_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
@@ -375,6 +380,9 @@ func _draw() -> void:
 			draw_circle(Vector2(x, y - 14), 15, Color(0.75, 0.29, 0.25, 0.08))
 			draw_circle(Vector2(x, y - 14), 7 + sin(motes_clock * 6 + y) * 1.4, Color("d68765"))
 	draw_rect(ROOM, Color("6b5260"), false, 2.0)
+	draw_damage_numbers()
+
+func draw_damage_numbers() -> void:
 	for floating: Dictionary in floats:
 		var color: Color = floating.color
 		color.a = minf(1.0, floating.life * 2.0)

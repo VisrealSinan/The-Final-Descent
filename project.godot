@@ -1,9 +1,9 @@
-; Playable Visreal combat prototype. Balance values are temporary.
+; Visreal's six-floor dungeon.
 config_version=5
 
 [application]
-config/name="The Final Descent - Visreal Combat Prototype"
-run/main_scene="res://game/combat.tscn"
+config/name="The Final Descent"
+run/main_scene="res://game/dungeon.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 
 [display]

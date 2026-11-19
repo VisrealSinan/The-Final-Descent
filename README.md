@@ -2,40 +2,22 @@
 
 A single-player, top-down 2D dungeon crawler with RPG elements, made for Andrew, Davey, and Han's seven-day hackathon.
 
-**Status:** Visreal now has a playable combat prototype: movement, directional melee, Shadowstep, Venom Blades, Nightshade, all five equipment effects, enemies, boss rewards, pause and death/restart. All three heroes also have sprite packs. The six-floor dungeon adventure is still in development.
+Play as Visreal across six floors of the void. Each floor has a refuge, three enemy rooms and a guardian’s sanctum. On the last floor, the Unblinking Court hunts the rogue with moving searchlights.
 
 ## How to play
 
-**Windows build:** extract `deliverables/visreal-combat-prototype-windows.zip`, then double-click `TheFinalDescent.exe`. Keep the `.pck` file beside it. No Godot installation is required. Local build archives are not committed to Git; build one from source with `tools/package_windows.ps1` as described in the [prototype guide](docs/COMBAT-PROTOTYPE.md).
+Extract `deliverables/the-final-descent-windows.zip` and open `TheFinalDescent.exe`. Keep the adjacent PCK file with it. From source, import `project.godot` in Godot 4.7.2 and press **F5**. To rebuild the Windows ZIP, run `./tools/package_windows.ps1 -GodotPath 'C:/path/to/Godot_v4.7.2-stable_win64_console.exe'`.
 
-**From source:** import `project.godot` in Godot 4.7.2 and press **F5** to play.
+- Press **Enter** to begin. **WASD** moves Visreal. Hold the **arrow keys** to aim and slash independently of movement.
+- **E** coats the blades with poison. Hit an enemy, then use **Q** to Shadowstep and slash again to trigger Nightshade.
+- Walk into a gold gate to advance. Clear every enemy to open the gates. Blue gates lead back to cleared rooms. Your map shows the five rooms and marks the guardian.
+- Kills grant XP. Each level increases maximum health and melee damage for this run. Each of the first five guardians equips a different gear slot. Walk onto the central stairs after clearing its sanctum. Each new refuge restores health and cooldowns.
+- On floor six, leave the moving beam before exposure fills. Defeat The Witness and its guard to win.
+- **Esc** pauses. **R** returns to the start screen. **Enter** starts a fresh run after death or victory.
 
-- **Enter:** begin / next fight / retry after death.
-- **WASD:** move. **Hold arrow keys:** aim and repeatedly melee attack. Combine two arrows to aim diagonally.
-- **Q:** Shadowstep toward your last arrow aim; empower the next slash.
-- **E:** Venom Blades. Hit an enemy to poison it, then use an empowered slash to trigger Nightshade.
-- **Esc:** pause/resume. **R:** restart the run. Close the window to quit.
+![Visreal in the first refuge](previews/dungeon.png)
 
-Five test fights each contain a guardian and two melee enemies. Each guardian automatically equips one random, nonduplicate gear piece. After all five rewards, continue sparring with the full kit. Death ends the run; restarting clears equipment. Health and cooldowns restore between fights. The test fights are not the planned dungeon floors. Numbers and several implementation details are provisional; see the [combat guide and temporary values](docs/COMBAT-PROTOTYPE.md).
-
-![Visreal combat prototype](previews/combat-prototype.png)
-
-To inspect all character sprites, open `previews/characters_preview.tscn` in Godot and press **F6**. Press **1** for Visreal, **2** for Han, or **3** for Ghalrym. Space pauses, Right steps frames while paused, R replays, and T changes the panel backdrop. These are viewer controls, separate from combat controls.
-
-Sprite packs and import instructions: [Visreal](assets/characters/visreal/README.md), [Han](assets/characters/han/README.md), [Ghalrym](assets/characters/ghalrym/README.md). Each includes 5 transparent sheets, 20 animations, 80 frames, a SpriteFrames resource, a visual scene, and atlas JSON. Tested with Godot 4.7.2.
-
-The planned full game's loop is:
-
-1. Choose Visreal the Rogue, Ghalrym the Cat Druid, or Han the Bear Druid. Your chosen hero ventures alone.
-2. Start on floor one and descend through six floors.
-3. Each floor contains five rooms: one enemy-free spawn room and four rooms with enemies, including a floor boss within that room count.
-4. Move and actively use class-based melee attacks. Enemy kills award XP.
-5. Leveling increases stats for the remainder of the run.
-6. Earn one equipment piece from each of the first five floor bosses in random order with no duplicates, completing all five slots before floor six. The reward order is randomized anew for each run.
-7. Face a sixth-floor challenge themed around something the selected class fears or dislikes; its details will be designed later.
-8. On death, use the game-over screen to return to the main menu or restart from floor one.
-
-There is no progression between runs in the initial version; earned equipment resets with the run. Visreal's shadow-and-poison skill kit is approved; enemies and bosses, the other heroes' skills, stats, further control behavior, floor-transition details, and the finale are still being designed.
+The combat chamber is still available in Godot by opening `game/combat.tscn` and pressing **F6**. All three heroes’ animations are available in `previews/characters_preview.tscn`. Han’s and Ghalrym’s playable kits are pending.
 
 ## Design
 
