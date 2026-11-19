@@ -2,17 +2,29 @@
 
 A single-player, top-down 2D dungeon crawler with RPG elements, made for Andrew, Davey, and Han's seven-day hackathon.
 
-**Status:** All three heroes have a first Godot-ready sprite pack and a shared animation preview. Dungeon gameplay has not been implemented yet.
+**Status:** Visreal now has a playable combat prototype: movement, directional melee, Shadowstep, Venom Blades, Nightshade, all five equipment effects, enemies, boss rewards, pause and death/restart. All three heroes also have sprite packs. The six-floor dungeon adventure is still in development.
 
 ## How to play
 
-Gameplay launch instructions will be added when the first playable dungeon build exists. The engine is Godot; the target platform remains to be decided. Chosen gameplay controls are **WASD to move** and **hold an arrow key to aim and repeatedly melee attack**, independently of movement. All three playable characters are melee-only; Visreal uses sword slashes. These gameplay controls are not implemented yet.
+**Windows build:** extract `deliverables/visreal-combat-prototype-windows.zip`, then double-click `TheFinalDescent.exe`. Keep the `.pck` file beside it. No Godot installation is required. Local build archives are not committed to Git; build one from source with `tools/package_windows.ps1` as described in the [prototype guide](docs/COMBAT-PROTOTYPE.md).
 
-To inspect the character assets now, import `project.godot` in Godot 4 and press **F5**. Press **1** for Visreal, **2** for Han, or **3** for Ghalrym. Space pauses, Right steps frames while paused, R replays, and T changes the panel backdrop. Preview controls are not final game controls. The original standalone Visreal preview remains available.
+**From source:** import `project.godot` in Godot 4.7.2 and press **F5** to play.
+
+- **Enter:** begin / next fight / retry after death.
+- **WASD:** move. **Hold arrow keys:** aim and repeatedly melee attack. Combine two arrows to aim diagonally.
+- **Q:** Shadowstep toward your last arrow aim; empower the next slash.
+- **E:** Venom Blades. Hit an enemy to poison it, then use an empowered slash to trigger Nightshade.
+- **Esc:** pause/resume. **R:** restart the run. Close the window to quit.
+
+Five test fights each contain a guardian and two melee enemies. Each guardian automatically equips one random, nonduplicate gear piece. After all five rewards, continue sparring with the full kit. Death ends the run; restarting clears equipment. Health and cooldowns restore between fights. The test fights are not the planned dungeon floors. Numbers and several implementation details are provisional; see the [combat guide and temporary values](docs/COMBAT-PROTOTYPE.md).
+
+![Visreal combat prototype](previews/combat-prototype.png)
+
+To inspect all character sprites, open `previews/characters_preview.tscn` in Godot and press **F6**. Press **1** for Visreal, **2** for Han, or **3** for Ghalrym. Space pauses, Right steps frames while paused, R replays, and T changes the panel backdrop. These are viewer controls, separate from combat controls.
 
 Sprite packs and import instructions: [Visreal](assets/characters/visreal/README.md), [Han](assets/characters/han/README.md), [Ghalrym](assets/characters/ghalrym/README.md). Each includes 5 transparent sheets, 20 animations, 80 frames, a SpriteFrames resource, a visual scene, and atlas JSON. Tested with Godot 4.7.2.
 
-The agreed game loop is:
+The planned full game's loop is:
 
 1. Choose Visreal the Rogue, Ghalrym the Cat Druid, or Han the Bear Druid. Your chosen hero ventures alone.
 2. Start on floor one and descend through six floors.
@@ -33,7 +45,7 @@ There is no progression between runs in the initial version; earned equipment re
 - [Ghalrym character brief and concepts](docs/characters/GHALRYM.md)
 - [Official hackathon rules](Hackathon-Official-Rules.md)
 
-Visreal's appearance, first sprite pack, and skill kit are approved: **Twin Slashes, Shadowstep, Venom Blades, and Nightshade**. All five equipment effects are also approved: **paired swords** deal poison and shadow damage through melee hits; **armor** reduces incoming damage; **cape** reduces Shadowstep's cooldown; **mask** strengthens poison damage; **trinket** strengthens the shadow strike after Shadowstep. Numerical balance is deferred until playtesting. These gameplay systems are not implemented yet. Han's gnome-bear v3 and Ghalrym's human-faced catgirl v4 are the chosen references for their new sprite packs; their skills remain open.
+Visreal's approved kit and equipment effects are implemented with temporary numbers: **Twin Slashes, Shadowstep, Venom Blades, and Nightshade**; **paired swords** deal poison and shadow damage through melee hits; **armor** reduces incoming damage; **cape** reduces Shadowstep's cooldown; **mask** strengthens poison damage; **trinket** strengthens the shadow strike after Shadowstep. Final numerical balance is deferred until playtesting. Han's gnome-bear v3 and Ghalrym's human-faced catgirl v4 are the chosen visual references; their gameplay skills remain open.
 
 ## Hackathon window
 
@@ -44,9 +56,10 @@ The human defines the game and approves major creative decisions. AI may refine 
 
 ## Tools used
 
-- ChatGPT / Codex: planning, design documentation, and repository setup.
+- ChatGPT / Codex: planning, design documentation, GDScript implementation, tests, packaging, and repository management.
 - Built-in OpenAI image generation: character concepts, revisions, and transparent sprite sheets for Visreal, Han, and Ghalrym.
-- Godot 4.7.2: sprite resources, preview rendering, and import/playback validation.
+- Godot 4.7.2: combat runtime, sprite resources, rendering, automated integration checks, and packaging.
+- PowerShell: local build automation and Windows ZIP packaging.
 - Git and GitHub: version control and project hosting.
 
 Update this list as additional tools are actually used. The rules do not require a per-asset tool mapping.

@@ -10,14 +10,14 @@ This file records decisions made by Davey. Suggestions are not approved features
 - A run spans six floors. Davey replaced the earlier endless-survival direction with a defined six-floor descent.
 - Exactly five rooms per floor: an enemy-free spawn room plus four rooms containing enemies.
 - Dark fantasy, World of Warcraft-inspired parody art direction.
-- Engine: Godot, selected by Davey. The first deliverable is a character asset preview, not the playable dungeon crawler.
+- Engine: Godot, selected by Davey. A playable Visreal combat prototype now accompanies the character asset preview; the full dungeon crawler remains in development.
 
 ## Floors and boss rewards
 
 - Each floor has a boss. Boss encounters fit within the existing five-room-per-floor limit; their exact placement and encounter designs remain open.
 - Bosses drop one equipment piece per floor. The first five floors provide the five pieces needed to complete the hero's equipment before floor six.
 - Davey chose random reward order with no duplicates: the first five bosses each drop a different equipment slot, completing all five slots before floor six.
-- Implementation plan: shuffle the five reward slots once when a run starts and consume one entry for each of the first five boss rewards. A new run gets a fresh shuffle. This logic is not implemented yet.
+- Implemented in the combat prototype: shuffle the five reward slots once when a run starts and consume one entry for each of the first five guardian rewards. A new run gets a fresh shuffle. Dungeon floors themselves are not implemented yet.
 - Visreal's paired swords count as a single equipment reward for his paired-swords slot.
 - Floor six is the final floor, themed around something the selected class fears or dislikes. Davey explicitly deferred its detailed design.
 - The sixth boss's reward, the victory sequence, and whether Han and Ghalrym receive distinct final-floor variants despite both being Druids remain open. No specific fears, enemies, or final-floor mechanics have been chosen.
@@ -30,7 +30,7 @@ This file records decisions made by Davey. Suggestions are not approved features
 - Movement and attack direction are independent, allowing movement one way while attacking another.
 - This replaces the earlier assistant suggestion of mouse aiming and left-click attacks.
 - Holding an arrow key repeatedly performs the basic melee attack in that direction. Davey selected hold-to-repeat for ease of play; individual key presses are not required for successive attacks.
-- These mappings are agreed design, not yet implemented gameplay. Diagonal aiming and special-ability bindings remain to be decided. Repeat cadence will follow the attack timing once it is defined.
+- WASD and hold-to-repeat arrow attacks are implemented. The prototype adds diagonal aiming, Q for Shadowstep, and E for Venom Blades as provisional controls. Repeat cadence uses a temporary attack interval.
 - Visreal's basic attack is a close-range sword slash. Player attacks are melee-only; no ranged player attacks. This does not decide enemy attack types, which remain open.
 - Melee-only does not yet prescribe equal reach, damage, or attack speed. Those values remain open; Visreal's approved abilities are recorded below, and Han's and Ghalrym's kits remain to be designed with Davey.
 
@@ -64,7 +64,7 @@ Davey also chose five equipment slots for Visreal, with both swords occupying on
 - **Mask:** increased poison damage.
 - **Trinket:** increased shadow bonus damage on the slash empowered by Shadowstep.
 
-Item names remain working proposals in [Visreal's character brief](characters/VISREAL.md#equipment). Equipment comes from the floor bosses in random order without duplicates as described above. Skill bindings, poison behavior and stacking, and equipment interactions with Venom Blades and Nightshade remain open. Davey explicitly deferred numerical balance until later; damage values, cooldowns, durations, and percentages will be tuned during playtesting. These mechanics are agreed design, not implemented gameplay.
+Item names remain working proposals in [Visreal's character brief](characters/VISREAL.md#equipment). Equipment comes from the floor bosses in random order without duplicates as described above. The combat prototype implements these effects and skills with provisional bindings, poison behavior and equipment interactions documented in the [prototype guide](COMBAT-PROTOTYPE.md). Davey explicitly authorized temporary numbers; damage values, cooldowns, durations, and percentages will be tuned during playtesting.
 
 ### Ghalrym
 
@@ -85,9 +85,9 @@ A Druid who chooses bear form and enjoys being a caked-up bear. Davey approved t
 
 ## Decisions still open
 
-- Target platform and distribution method.
-- Diagonal aiming and special-ability bindings; movement, attack key groups, and hold-to-repeat are decided above.
-- Han's and Ghalrym's skills; all characters' cooldowns, resources, and numerical stats; Visreal's detailed poison behavior.
+- Final target platforms and distribution method. A Windows x64 build is available for prototype testing.
+- Final skill bindings; diagonal aim and Q/E are provisional prototype defaults, while movement, arrow attacks, and hold-to-repeat were selected by Davey.
+- Han's and Ghalrym's skills; final cooldowns, resources, and numerical stats; review of Visreal's provisional poison interactions after playtesting.
 - Equipment slots and effects for Han and Ghalrym; item names, starting gear, collection/equipping behavior, and any character-specific restrictions. Boss drops, random reward order without duplicates, and Visreal's five slots and effects are decided above.
 - Enemy and boss types, behavior, and difficulty scaling.
 - Room connections, floor layouts, the condition for descending, and victory presentation.
@@ -100,6 +100,6 @@ Earlier assistant suggestions such as shadow rescue, healing purrs, an AI compan
 
 Davey supplies the creative direction. AI can make routine implementation decisions within agreed scope. Major unresolved design decisions and scope expansion go back to Davey. Overnight tasks must be human-defined and approved.
 
-Completed work: repository setup, character concepts, and first Godot-ready sprite packs for Visreal, Han, and Ghalrym with import resources and a shared animation preview. Davey explicitly requested Han and Ghalrym's sprite sheets after the visual revisions. This is not authorization to invent all remaining game systems.
+Completed work: repository setup, character concepts, Godot-ready sprite packs and a shared animation preview for all three characters, plus the playable Visreal combat prototype and Windows package. Davey explicitly requested the prototype using the agreed movement, attacks, skills, equipment, and temporary numbers. The test chamber, placeholder melee enemies, damage feedback, HUD, reward flow, pause/restart and automated checks support that request.
 
-Visreal's skill kit and equipment effects are now approved, with numerical balance explicitly deferred. Basic movement, melee hit detection, and combat have not yet been implemented. A small playable combat test is the next proposed implementation milestone to evaluate these mechanics; full dungeon and progression implementation remain later work. Han's and Ghalrym's kits and equipment are still open design work.
+The prototype now implements Visreal's movement, directional melee, approved skills and equipment effects, enemy attacks, five nonduplicate boss rewards, game-over/restart, and full-kit sparring. Its five fights are a test sequence, not the dungeon's floor layout. All temporary implementation choices and balance values are documented in [COMBAT-PROTOTYPE.md](COMBAT-PROTOTYPE.md). Full dungeon/XP progression, final enemies, Han's and Ghalrym's kits/equipment, and the class-themed finale remain later work.

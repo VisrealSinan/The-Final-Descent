@@ -1,15 +1,20 @@
-; Asset preview project. Gameplay implementation has not started.
+; Playable Visreal combat prototype. Balance values are temporary.
 config_version=5
 
 [application]
-config/name="The Final Descent - Character Asset Preview"
-run/main_scene="res://previews/characters_preview.tscn"
+config/name="The Final Descent - Visreal Combat Prototype"
+run/main_scene="res://game/combat.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 
 [display]
 window/size/viewport_width=1280
 window/size/viewport_height=900
+window/size/window_width_override=1280
+window/size/window_height_override=900
+window/size/min_width=960
+window/size/min_height=675
 window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
 
 [rendering]
 renderer/rendering_method="gl_compatibility"

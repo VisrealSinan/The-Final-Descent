@@ -44,13 +44,13 @@ The original unmasked concept remains available as a face reference; v3 supersed
 
 Davey selected Godot and explicitly requested complete sprite sheets ready to import. [Visreal asset pack and import instructions](../../assets/characters/visreal/README.md).
 
-The first pack contains idle, walk, basic dual-sword attack, hurt, and death in four cardinal directions. Davey reviewed the preview and said "it looks good." These support the agreed movement, weapons, and death behavior. The approved signature skills below are not implemented or represented by dedicated effect assets yet. Four frames per animation and initial playback rates are implementation defaults, not approved combat timing or balance.
+The first pack contains idle, walk, basic dual-sword attack, hurt, and death in four cardinal directions. Davey reviewed the preview and said "it looks good." The combat prototype now uses these animations with procedural slash arcs, shadow trails, poison indicators and damage feedback for the approved skills. Four frames per animation and initial playback rates are implementation defaults, not final combat timing or balance.
 
 ## Skills
 
 Davey confirmed the basic attack: close-range sword slashes directed with the arrow keys, with hold-to-repeat. All playable heroes are melee-only. Davey chose shadow- and poison-powered melee for Visreal's combat identity.
 
-Davey approved the complete starter kit below with "I like that kit for Visreal. Lets lock those in." These are agreed design decisions; gameplay is not implemented yet. The approved appearance remains the visual reference.
+Davey approved the complete starter kit below with "I like that kit for Visreal. Lets lock those in." These mechanics are now implemented in the combat prototype with temporary numbers, as Davey subsequently requested. The approved appearance remains the visual reference.
 
 ### Approved starter kit
 
@@ -63,7 +63,7 @@ The kit consists of one basic attack, two active skills, and one passive.
 | Active skill | Venom Blades | Temporarily coats the swords so melee hits poison enemies, dealing damage over time. |
 | Passive | Nightshade | Shadow-empowered strikes deal extra damage to poisoned enemies. |
 
-The intended combo is Venom Blades, melee hits to poison the enemy, then Shadowstep and a shadow-empowered slash benefiting from Nightshade. No skill keys, costs, cooldowns, durations, poison stacking rules, or damage values are selected yet.
+The intended combo is Venom Blades, melee hits to poison the enemy, then Shadowstep and a shadow-empowered slash benefiting from Nightshade. The prototype uses Q for Shadowstep and E for Venom Blades, cooldowns without a resource cost, and poison that refreshes without stacking. Numerical values and these implementation choices remain provisional; see the [prototype guide](../COMBAT-PROTOTYPE.md).
 
 ## Equipment
 
@@ -89,6 +89,6 @@ All five equipment effects are approved. After choosing the paired swords' effec
 | Mask | Nightshade Wrap | Increase the damage dealt by poison. | Approved by Davey |
 | Trinket | Umbral Seal | Increase the shadow bonus damage on the slash empowered by Shadowstep. | Approved by Davey |
 
-The paired blades remain melee weapons. Exact damage values, distribution between the two blades, whether the equipment's poison is immediate damage or a damage-over-time status, and its interaction with Venom Blades and Nightshade remain to be defined. The approved skill kit is unchanged; this equipment decision does not automatically grant every basic hit Nightshade's conditional bonus.
+The paired blades remain melee weapons. In the prototype, the pair adds direct poison and shadow damage to each melee hit. Venom Blades supplies the separate poison-over-time status, and Nightshade requires a Shadowstep-empowered strike against a target already poisoned before the hit. The mask boosts both poison sources; the trinket boosts Shadowstep's contribution. These interaction details and damage values are provisional implementation choices for playtesting.
 
-These item names use the existing approved sword, armor, cape, and mask appearances. The trinket has no selected visual design. The earlier starting-loadout suggestion is superseded by the boss-drop progression above. Rewards have no fixed floor assignments because their order is randomized each run without duplicates. Equipment gameplay is not implemented yet.
+These item names use the existing approved sword, armor, cape, and mask appearances. The trinket has no selected visual design. The prototype starts with the approved visual outfit and basic swords but no boss-equipment bonuses, then automatically equips one piece per guardian in random order without duplicates. All five equipment effects are implemented. Starting gear and automatic equipping remain provisional choices for the final dungeon.

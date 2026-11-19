@@ -1,0 +1,44 @@
+THE FINAL DESCENT - VISREAL COMBAT PROTOTYPE
+
+Windows x64. Extract the whole ZIP, then double-click TheFinalDescent.exe.
+Keep TheFinalDescent.pck next to the executable. No Godot installation is needed.
+
+Enter: begin / next fight / restart after death
+WASD: move
+Hold arrow keys: aim and repeatedly slash (two arrows allow diagonal aim)
+Q: Shadowstep in the last arrow aim direction; empower your next slash
+E: Venom Blades; temporarily coat swords to apply poison over time
+Esc: pause / resume
+R: reset the run, including gear
+Close the window or use Alt+F4 to quit.
+
+COMBO
+Press E, slash an enemy to poison it, press Q, then slash again before the
+empowerment expires. Nightshade adds damage to that empowered strike when
+the target is already poisoned. The arrow at Visreal's feet shows his aim.
+Red enemy arcs announce an incoming melee attack. Move out of reach to dodge.
+
+EQUIPMENT
+Five short fights each contain a guardian and two smaller melee enemies.
+Each guardian automatically equips one random piece from the remaining slots:
+  Paired swords: direct poison and shadow damage on melee hits
+  Armor: reduced incoming damage
+  Cape: shorter Shadowstep cooldown
+  Mask: increased direct poison and poison-over-time damage
+  Trinket: increased Shadowstep-empowered shadow damage
+There are no duplicate rewards. After five fights, continue sparring with the
+full kit or start over. Health and cooldowns reset between fights; gear does not.
+Death ends the run. Restarting clears gear and reshuffles the rewards.
+
+SCOPE
+This is a playable single-room combat prototype with temporary balance values,
+placeholder enemies, working equipment names, and no audio. The six-floor
+dungeon, XP progression, Han/Ghalrym gameplay and class-themed finale are not
+part of this build. The five test fights are not the five dungeon floors.
+
+Built with Godot 4.7.2, GDScript, ChatGPT/Codex and OpenAI-generated Visreal
+sprite assets. Source: https://github.com/VisrealSinan/The-Final-Descent
+
+This prototype bundles the full Godot runtime for convenient testing; it is
+larger than an optimized release export. Godot license: GODOT-LICENSE.txt.
+Godot third-party notices: https://godotengine.org/license/
