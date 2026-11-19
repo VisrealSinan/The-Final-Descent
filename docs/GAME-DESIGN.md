@@ -6,11 +6,12 @@ This file records decisions made by Davey. Suggestions are not approved features
 
 - Single-player, top-down 2D dungeon crawler with RPG elements.
 - Players select one of three heroes; the chosen hero ventures alone.
+- All three are playable. Davey chose bear swipes for Han and cat claws for Ghalrym and deferred their special skills. For this first build, Han has a broad, slower strike and more health. Ghalrym moves and strikes faster. Both Druids use the existing court on floor six and gain a temporary +2 melee damage per guardian reward.
 - Direct movement and active class-based melee attacks. All three playable characters are melee-only, as chosen by Davey for fairness.
 - A run spans six floors. Davey replaced the earlier endless-survival direction with a defined six-floor descent.
 - Exactly five rooms per floor: an enemy-free spawn room plus four rooms containing enemies.
 - Dark fantasy, World of Warcraft-inspired parody art direction.
-- Engine: Godot, selected by Davey. The default game scene is Visreal's six-floor dungeon. The original combat practice scene remains available.
+- Engine: Godot, selected by Davey. The game opens with hero selection for the six-floor dungeon. Visreal’s original practice scene remains available.
 
 ## Floors and boss rewards
 

@@ -29,6 +29,9 @@ var tagged := false
 var objective := ""
 var layout_art := Chamber.new()
 var masonry: Node2D
+var picker: Panel
+var hero_cards: Dictionary = {}
+var descend_button: Button
 
 func _ready() -> void:
 	masonry = Node2D.new()
@@ -49,7 +52,62 @@ func new_run() -> void:
 	super.new_run()
 	masonry.queue_redraw()
 	objective = "Descend through six floors."
-	show_overlay("THE FINAL DESCENT", "Six floors beneath the void. Walk through the lit gates, defeat each floor’s guardian and take the stairs deeper.\n\nWASD moves. Hold arrows to slash. Q uses Shadowstep and E coats your blades.", "Enter the dungeon  [Enter]", "Reset  [R]")
+	overlay.hide()
+	picker.show()
+	refresh_selection()
+
+func create_ui() -> void:
+	super.create_ui()
+	picker = panel(ui, Rect2(0, 0, 1280, 900), Color("10131c"), Color("302b37"))
+	picker.mouse_filter = Control.MOUSE_FILTER_STOP
+	label(picker, "THE FINAL DESCENT", Rect2(112, 71, 1040, 35), 21, GOLD)
+	label(picker, "Choose your hero", Rect2(110, 117, 1050, 70), 46, INK)
+	label(picker, "Take one hero into the six floors of the void.", Rect2(114, 193, 1000, 32), 18, MUTED)
+	for i in Heroes.IDS.size():
+		var id := Heroes.IDS[i]
+		var card := button(picker, "", Rect2(112 + 356 * i, 265, 340, 390), choose_hero.bind(id))
+		hero_cards[id] = card
+		var tint: Color = Heroes.COLORS[id]
+		label(card, "[%d]" % (i + 1), Rect2(16, 12, 86, 26), 16, tint)
+		var visual: Node2D = Heroes.VISUALS[id].instantiate()
+		visual.position = Vector2(170, 213)
+		visual.scale = Vector2.ONE * 0.57
+		card.add_child(visual)
+		label(card, id.capitalize(), Rect2(24, 222, 290, 48), 31, INK)
+		label(card, Heroes.ROLES[id], Rect2(26, 269, 288, 28), 16, tint)
+		var summary := label(card, Heroes.SUMMARIES[id], Rect2(26, 309, 285, 58), 16, MUTED)
+		summary.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	descend_button = button(picker, "", Rect2(750, 699, 414, 58), primary_action)
+	label(picker, "Click a hero or use 1–3   ·   Enter to descend", Rect2(112, 700, 600, 56), 17, MUTED)
+
+func choose_hero(id: String) -> void:
+	if state == "ready" and id in Heroes.IDS and selected_hero != id:
+		selected_hero = id
+		new_run()
+
+func refresh_selection() -> void:
+	for id: String in Heroes.IDS:
+		var selected := id == selected_hero
+		var tint: Color = Heroes.COLORS[id]
+		var card: Button = hero_cards[id]
+		for mode: String in ["normal", "hover", "pressed"]:
+			var style := card.get_theme_stylebox(mode).duplicate() as StyleBoxFlat
+			style.bg_color = Color("1a1d29").lerp(tint, 0.13 if selected or mode == "hover" else 0.025)
+			style.border_color = tint if selected else Color("514959")
+			style.set_border_width_all(3 if selected else 1)
+			card.add_theme_stylebox_override(mode, style)
+	descend_button.text = "Descend as %s  [Enter]" % selected_hero.capitalize()
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if state == "ready" and event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode >= KEY_1 and event.keycode <= KEY_3:
+			choose_hero(Heroes.IDS[event.keycode - KEY_1])
+			return
+		if event.keycode in [KEY_LEFT, KEY_RIGHT]:
+			var offset := -1 if event.keycode == KEY_LEFT else 1
+			choose_hero(Heroes.IDS[posmod(Heroes.IDS.find(selected_hero) + offset, Heroes.IDS.size())])
+			return
+	super._unhandled_key_input(event)
 
 func primary_action() -> void:
 	if get_tree().paused:
@@ -62,6 +120,7 @@ func primary_action() -> void:
 
 func start_floor() -> void:
 	state = "fight"
+	picker.hide()
 	cleared.assign([0])
 	reward_claimed = false
 	overlay.hide()
@@ -127,7 +186,7 @@ func on_enemy_defeated(enemy: Node2D) -> void:
 		reward_claimed = true
 		last_reward = rewards.pop_front()
 		player.equip(last_reward)
-		set_notice("Equipped %s   ·   %s" % [T.ITEM_NAMES[last_reward], T.ITEM_EFFECTS[last_reward]], 6)
+		set_notice("Equipped %s   ·   %s" % [Heroes.item_name(selected_hero, last_reward), Heroes.item_effect(selected_hero, last_reward)], 6)
 	if enemies_remaining == 0:
 		cleared.append(room)
 		tagged = false
@@ -136,7 +195,7 @@ func on_enemy_defeated(enemy: Node2D) -> void:
 			state = "won"
 			player.active = false
 			player.sprite.play("idle_" + player.direction_name(player.aim))
-			show_overlay("THE WITNESS FALLS", "The last searchlight goes dark. Visreal slips through the court unseen.\n\nSix floors cleared   ·   %d enemies defeated\nLevel %d   ·   %d gear pieces recovered" % [kills, level, player.gear.size()], "Descend again  [Enter]", "Main menu  [R]")
+			show_overlay("THE WITNESS FALLS", "The last searchlight goes dark. %s emerges from the court.\n\nSix floors cleared   ·   %d enemies defeated\nLevel %d   ·   %d gear pieces recovered" % [selected_hero.capitalize(), kills, level, player.gear.size()], "Descend again  [Enter]", "Choose hero  [R]")
 	refresh_objective()
 
 func xp_needed() -> int:
@@ -165,7 +224,7 @@ func refresh_objective() -> void:
 func on_player_died() -> void:
 	super.on_player_died()
 	tagged = false
-	show_overlay("THE VOID TAKES YOU", "Visreal fell in %s, floor %d.\n\n%d enemies defeated   ·   Level %d   ·   %d gear pieces recovered" % [FLOOR_NAMES[depth - 1], depth, kills, level, player.gear.size()], "Try again  [Enter]", "Main menu  [R]")
+	show_overlay("THE VOID TAKES YOU", "%s fell in %s, floor %d.\n\n%d enemies defeated   ·   Level %d   ·   %d gear pieces recovered" % [selected_hero.capitalize(), FLOOR_NAMES[depth - 1], depth, kills, level, player.gear.size()], "Try again  [Enter]", "Choose hero  [R]")
 
 func _physics_process(delta: float) -> void:
 	if state != "fight" or get_tree().paused:
@@ -204,7 +263,7 @@ func update_hud() -> void:
 	super.update_hud()
 	if not is_instance_valid(player):
 		return
-	place_label.text = "VISREAL   /   " + FLOOR_NAMES[depth - 1].to_upper()
+	place_label.text = selected_hero.to_upper() + "   /   " + FLOOR_NAMES[depth - 1].to_upper()
 	objective_label.text = objective
 	round_label.text = "FLOOR %d / 6    ·    ROOM %d / 5" % [depth, room + 1]
 	enemy_label.text = "%s    ·    %d enemies" % [ROOMS[room], enemies_remaining]

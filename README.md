@@ -2,22 +2,23 @@
 
 A single-player, top-down 2D dungeon crawler with RPG elements, made for Andrew, Davey, and Han's seven-day hackathon.
 
-Play as Visreal across six floors of the void. Each floor has a refuge, three enemy rooms and a guardian’s sanctum. On the last floor, the Unblinking Court hunts the rogue with moving searchlights.
+Choose Visreal, Han or Ghalrym and venture alone through six floors of the void. Each floor has a refuge, three enemy rooms and a guardian’s sanctum. Moving searchlights sweep the Unblinking Court on the last floor.
 
 ## How to play
 
 Extract `deliverables/the-final-descent-windows.zip` and open `TheFinalDescent.exe`. Keep the adjacent PCK file with it. From source, import `project.godot` in Godot 4.7.2 and press **F5**. To rebuild the Windows ZIP, run `./tools/package_windows.ps1 -GodotPath 'C:/path/to/Godot_v4.7.2-stable_win64_console.exe'`.
 
-- Press **Enter** to begin. **WASD** moves Visreal. Hold the **arrow keys** to aim and slash independently of movement.
-- **E** coats the blades with poison. Hit an enemy, then use **Q** to Shadowstep and slash again to trigger Nightshade.
+- Click a hero or press **1** for Visreal, **2** for Han or **3** for Ghalrym. Press **Enter** to descend. **WASD** moves your hero. Hold the **arrow keys** to aim and attack independently of movement.
+- Visreal uses swords. **E** coats the blades with poison. Hit an enemy, then use **Q** to Shadowstep and slash again to trigger Nightshade.
+- Han uses a wide bear swipe and starts with more health. Ghalrym moves faster and attacks with quick claws. For this first pass, their five guardian rewards each add two points of melee damage.
 - Walk into a gold gate to advance. Clear every enemy to open the gates. Blue gates lead back to cleared rooms. Your map shows the five rooms and marks the guardian.
 - Kills grant XP. Each level increases maximum health and melee damage for this run. Each of the first five guardians equips a different gear slot. Walk onto the central stairs after clearing its sanctum. Each new refuge restores health and cooldowns.
 - On floor six, leave the moving beam before exposure fills. Defeat The Witness and its guard to win.
-- **Esc** pauses. **R** returns to the start screen. **Enter** starts a fresh run after death or victory.
+- **Esc** pauses. **R** returns to hero selection. **Enter** retries with the same hero after death or victory.
 
-![Visreal in the first refuge](previews/dungeon.png)
+![Select Visreal, Han or Ghalrym](previews/choose-hero.png)
 
-The combat chamber is still available in Godot by opening `game/combat.tscn` and pressing **F6**. All three heroes’ animations are available in `previews/characters_preview.tscn`. Han’s and Ghalrym’s playable kits are pending.
+Visreal’s practice chamber is available in Godot by opening `game/combat.tscn` and pressing **F6**. All three heroes’ animations are available in `previews/characters_preview.tscn`.
 
 ## Design
 

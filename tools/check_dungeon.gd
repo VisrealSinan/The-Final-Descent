@@ -24,6 +24,27 @@ func release() -> void:
 	for action: String in ACTIONS:
 		Input.action_release(action)
 
+func tap(code: Key) -> void:
+	for down in [true, false]:
+		var key := InputEventKey.new()
+		key.keycode = code
+		key.physical_keycode = code
+		key.pressed = down
+		Input.parse_input_event(key)
+		Input.flush_buffered_events()
+
+func click_button(control: Button) -> void:
+	var center := control.get_global_rect().get_center()
+	var motion := InputEventMouseMotion.new()
+	motion.position = center
+	root.push_input(motion, true)
+	for down in [true, false]:
+		var click := InputEventMouseButton.new()
+		click.button_index = MOUSE_BUTTON_LEFT
+		click.position = center
+		click.pressed = down
+		root.push_input(click, true)
+
 func steer(direction: Vector2, prefix: String, tolerance: float) -> void:
 	if absf(direction.x) > tolerance:
 		Input.action_press(prefix + ("right" if direction.x > 0 else "left"))
@@ -35,9 +56,26 @@ func run() -> void:
 	game = main.instantiate()
 	root.add_child(game)
 	await physics_frame
-	check(game.state == "ready", "Title screen")
-	game.primary_action()
+	var hero := "visreal"
+	for arg in OS.get_cmdline_user_args():
+		if arg in game.Heroes.IDS:
+			hero = arg
+	check(game.state == "ready" and game.picker.visible, "Choose hero at the title screen")
+	tap(KEY_1 + game.Heroes.IDS.find(hero))
+	await physics_frame
+	check(game.selected_hero == hero and game.state == "ready", "Number selects the hero before entering")
+	tap(KEY_ENTER)
+	await physics_frame
 	var p = game.player
+	check(not game.picker.visible and p.hero_id == hero and get_nodes_in_group("player").size() == 1, "Only the selected hero enters")
+	check(p.sprite.sprite_frames.resource_path.ends_with(hero + "_frames.tres"), "Correct sprite sheet loaded")
+	check(game.hero_label.text == hero.to_upper(), "HUD identifies selected hero")
+	var initial_health: float = p.max_health
+	tap(KEY_3 if hero != "ghalrym" else KEY_2)
+	check(game.selected_hero == hero, "Hero locked during run")
+	if hero != "visreal":
+		check(not p.try_shadowstep() and not p.try_venom(), "Druids only use their own basic melee")
+		check(not game.bindings_label.text.contains("Shadowstep"), "Druid controls match the kit")
 	while ticks < 80000 and game.state == "fight":
 		await physics_frame
 		release()
@@ -95,8 +133,9 @@ func run() -> void:
 	check(visited.size() == 30, "Visited 30 rooms")
 	check(tested_return, "Returned to refuge and re-entered cleared passage")
 	check(gear_seen.size() == 5 and p.gear.size() == 5, "All five distinct boss drops")
-	check(game.level > 1 and p.melee_bonus > 0 and p.max_health > p.T.MAX_HEALTH, "Run XP raised stats")
+	check(game.level > 1 and p.melee_bonus > 0 and p.max_health > initial_health, "Run XP raised stats")
 	if game.state == "won":
+		check(game.overlay_copy.text.contains(hero.capitalize()), "Victory names the selected hero")
 		game.primary_action()
 		check(game.depth == 1 and game.room == 0 and game.level == 1 and game.player.gear.is_empty(), "Victory restart clears progress")
 		game.toggle_pause()
@@ -104,8 +143,10 @@ func run() -> void:
 		game.toggle_pause()
 		game.player.take_damage(10000)
 		check(game.state == "dead", "Death ends run")
+		check(game.overlay_copy.text.contains(hero.capitalize()), "Death screen names selected hero")
 		game.primary_action()
 		check(game.state == "fight" and game.depth == 1 and game.room == 0, "Death retry reaches refuge")
+		check(game.player.hero_id == hero, "Retry keeps the selected hero")
 		# Isolate the sixth-floor beam to verify grace, damage, shade and pause.
 		game.depth = 6
 		game.start_floor()
@@ -122,5 +163,11 @@ func run() -> void:
 			game.player.position.x = game.light_x()
 			game.advance_gaze(1.0 / 60.0)
 		check(game.player.health < hp, "Staying in the beam deals damage")
-	print("%d dungeon checks, %d rooms, %d simulated physics frames, %d failures" % [checks,visited.size(),ticks,errors.size()])
+		tap(KEY_R)
+		check(game.picker.visible and game.state == "ready", "Restart returns to hero picker")
+		var next: String = game.Heroes.IDS[(game.Heroes.IDS.find(hero) + 1) % 3]
+		click_button(game.hero_cards[next])
+		click_button(game.descend_button)
+		check(game.player.hero_id == next and game.state == "fight" and game.player.gear.is_empty(), "Buttons start a fresh run with a different hero")
+	print("%s: %d dungeon checks, %d rooms, %d simulated physics frames, %d failures" % [hero, checks,visited.size(),ticks,errors.size()])
 	quit(0 if errors.is_empty() else 1)

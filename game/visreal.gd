@@ -5,7 +5,13 @@ signal hit_landed(at: Vector2, payload: Dictionary)
 signal skill_used(skill: String)
 
 const T = preload("res://game/tuning.gd")
-const VISUAL = preload("res://assets/characters/visreal/visreal_visual.tscn")
+const Heroes = preload("res://game/heroes.gd")
+
+var hero_id := "visreal"
+var move_speed := T.MOVE_SPEED
+var attack_interval := T.ATTACK_INTERVAL
+var attack_angle := T.ATTACK_HALF_ANGLE
+var swipe_damage := T.PHYSICAL_DAMAGE
 
 var health := T.MAX_HEALTH
 var max_health := T.MAX_HEALTH
@@ -34,6 +40,21 @@ var trails: Array[Dictionary] = []
 var trail_clock := 0.0
 
 func _ready() -> void:
+	# First-pass melee tuning. All three heroes use the same movement and hit detection.
+	match hero_id:
+		"han":
+			max_health = 190.0
+			move_speed = 210.0
+			attack_interval = 0.56
+			attack_angle = 1.26
+			swipe_damage = 31.0
+		"ghalrym":
+			max_health = 130.0
+			move_speed = 265.0
+			attack_interval = 0.30
+			attack_angle = 0.87
+			swipe_damage = 17.0
+	health = max_health
 	collision_layer = 2
 	collision_mask = 1
 	var shape := CollisionShape2D.new()
@@ -41,7 +62,7 @@ func _ready() -> void:
 	circle.radius = T.BODY_RADIUS
 	shape.shape = circle
 	add_child(shape)
-	var visual := VISUAL.instantiate()
+	var visual: Node2D = Heroes.VISUALS[hero_id].instantiate()
 	visual.scale = Vector2(0.37, 0.37)
 	add_child(visual)
 	sprite = visual.get_node("AnimatedSprite2D")
@@ -75,7 +96,7 @@ func _physics_process(delta: float) -> void:
 			trails.append({"at": global_position, "life": 0.24})
 			trail_clock = 0.025
 	else:
-		velocity = movement * T.MOVE_SPEED
+		velocity = movement * move_speed
 		if aiming != Vector2.ZERO:
 			try_attack()
 	move_and_slide()
@@ -83,7 +104,7 @@ func _physics_process(delta: float) -> void:
 		attack_elapsed += delta
 		if not hit_resolved and attack_elapsed >= T.ATTACK_WINDUP:
 			resolve_attack()
-		if attack_elapsed >= T.ATTACK_INTERVAL:
+		if attack_elapsed >= attack_interval:
 			attack_elapsed = -1.0
 	for i in range(trails.size() - 1, -1, -1):
 		trails[i].life -= delta
@@ -95,7 +116,7 @@ func _physics_process(delta: float) -> void:
 func try_attack() -> bool:
 	if not active or dead or attack_cooldown > 0.0 or dash_left > 0.0:
 		return false
-	attack_cooldown = T.ATTACK_INTERVAL
+	attack_cooldown = attack_interval
 	attack_elapsed = 0.0
 	attack_direction = aim
 	attack_empowered = empower_left > 0.0
@@ -104,6 +125,7 @@ func try_attack() -> bool:
 	hit_resolved = false
 	attacks_started += 1
 	sprite.play("attack_" + direction_name(attack_direction))
+	sprite.speed_scale = 0.4 / attack_interval if hero_id != "visreal" else 1.0
 	sprite.frame = 0
 	return true
 
@@ -116,15 +138,17 @@ func resolve_attack() -> void:
 		var radius: float = target.body_radius
 		if difference.length() > T.ATTACK_REACH + radius:
 			continue
-		if difference.length() > radius and attack_direction.dot(difference.normalized()) < cos(T.ATTACK_HALF_ANGLE):
+		if difference.length() > radius and attack_direction.dot(difference.normalized()) < cos(attack_angle):
 			continue
 		var payload: Dictionary = T.hit(gear, attack_empowered, attack_coated, target.poison_left > 0.0)
+		if hero_id != "visreal":
+			payload.physical = swipe_damage + Heroes.DRUID_GEAR_DAMAGE * gear.size()
 		payload.physical += melee_bonus
 		target.receive_hit(payload, attack_direction)
 		hit_landed.emit(target.global_position, payload)
 
 func try_shadowstep() -> bool:
-	if not active or dead or shadow_cooldown > 0.0 or dash_left > 0.0:
+	if hero_id != "visreal" or not active or dead or shadow_cooldown > 0.0 or dash_left > 0.0:
 		return false
 	shadow_cooldown = T.shadowstep_cooldown(gear)
 	dash_direction = aim
@@ -137,7 +161,7 @@ func try_shadowstep() -> bool:
 	return true
 
 func try_venom() -> bool:
-	if not active or dead or venom_cooldown > 0.0:
+	if hero_id != "visreal" or not active or dead or venom_cooldown > 0.0:
 		return false
 	venom_cooldown = T.VENOM_COOLDOWN
 	venom_left = T.VENOM_DURATION
@@ -159,13 +183,14 @@ func take_damage(amount: float) -> float:
 		empower_left = 0.0
 		trails.clear()
 		sprite.modulate = Color.WHITE
+		sprite.speed_scale = 1.0
 		sprite.play("death_" + direction_name(aim))
 		died.emit()
 	queue_redraw()
 	return actual
 
 func equip(slot: String) -> void:
-	if slot in T.SLOTS and slot not in gear:
+	if slot in Heroes.slots(hero_id) and slot not in gear:
 		gear.append(slot)
 
 func prepare_bout() -> void:
@@ -198,6 +223,8 @@ func update_animation(movement: Vector2) -> void:
 			facing = movement if movement != Vector2.ZERO else dash_direction
 	var animation := action + "_" + direction_name(facing)
 	if sprite.animation != animation:
+		if action != "attack":
+			sprite.speed_scale = 1.0
 		sprite.play(animation)
 	var tint := Color.WHITE
 	if dash_left > 0.0 or empower_left > 0.0:
@@ -234,6 +261,12 @@ func _draw() -> void:
 			color = Color("bc8bf2")
 		color.a = clampf((0.32 - attack_elapsed) / 0.22, 0.0, 1.0)
 		var angle := attack_direction.angle()
-		draw_arc(Vector2(0, -25), T.ATTACK_REACH, angle - T.ATTACK_HALF_ANGLE, angle + T.ATTACK_HALF_ANGLE, 24, color, 6.0, true)
+		if hero_id == "visreal":
+			draw_arc(Vector2(0, -25), T.ATTACK_REACH, angle - attack_angle, angle + attack_angle, 24, color, 6.0, true)
+		else:
+			var claw: Color = Heroes.COLORS[hero_id]
+			claw.a = color.a
+			for i in 3:
+				draw_arc(Vector2(0, -17), T.ATTACK_REACH - i * 6.0, angle - attack_angle + i * 0.09, angle + attack_angle, 20, claw, 3.0, true)
 		if attack_coated or "swords" in gear:
 			draw_arc(Vector2(0, -25), T.ATTACK_REACH - 9.0, angle - 0.8, angle + 0.8, 24, Color(0.6, 0.9, 0.35, color.a), 3.0, true)

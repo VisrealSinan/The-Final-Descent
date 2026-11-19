@@ -1,25 +1,28 @@
 THE FINAL DESCENT
 
 Extract the Windows ZIP and open TheFinalDescent.exe. Keep TheFinalDescent.pck
-in the same folder. Press Enter to descend as Visreal.
+in the same folder. Click a hero, or press 1 for Visreal, 2 for Han, or 3 for
+Ghalrym. Press Enter to descend alone as your selected hero.
 
 WASD moves. Walk into the gold chevrons to enter the next room. Blue gates
 lead back to cleared rooms. The map marks your room with a gold dot and the
 guardian with a red dot. Enemies seal the gates until you defeat them.
 Each floor begins in a refuge where your health and skills recover.
 
-Hold the arrow keys to slash in that direction. You can move independently.
-Q uses Shadowstep. E coats your swords with poison. Poison an enemy, then use
+Hold the arrow keys to attack in that direction. You can move independently.
+Han makes broad bear swipes. Ghalrym strikes rapidly with cat claws. Their
+guardian rewards each add two melee damage with the current temporary tuning.
+For Visreal, Q uses Shadowstep. E coats your swords with poison. Poison an enemy, then use
 Shadowstep and slash it again to trigger Nightshade. Red enemy arcs signal
-incoming attacks. Esc pauses. R returns to the main menu.
+incoming attacks. Esc pauses. R returns to hero selection.
 
 Every kill earns XP. Leveling raises maximum health and melee damage for the
 run. Each of the first five guardians drops a different piece of equipment.
 Clear the sanctum and walk onto its central stairs to reach the next floor.
-On floor six, moving searchlights expose Visreal. Leave the beam before it
+On floor six, moving searchlights expose your hero. Leave the beam before it
 hurts you. Clear the sanctum of the Unblinking Court to win.
 
-Enter retries after death or victory. A new run resets gear and levels.
+Enter retries with the same hero after death or victory. A new run resets gear and levels.
 The source project also includes the original combat chamber.
 
 Source: https://github.com/VisrealSinan/The-Final-Descent

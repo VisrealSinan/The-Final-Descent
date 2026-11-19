@@ -1,6 +1,7 @@
 extends Node2D
 
 const T = preload("res://game/tuning.gd")
+const Heroes = preload("res://game/heroes.gd")
 const Player = preload("res://game/visreal.gd")
 const Enemy = preload("res://game/enemy.gd")
 const Controls = preload("res://game/controls.gd")
@@ -11,6 +12,7 @@ const MUTED := Color("9c9baa")
 const GOLD := Color("d8b67e")
 
 var player: CharacterBody2D
+var selected_hero := "visreal"
 var actors: Node2D
 var state := "ready"
 var bout := 0
@@ -35,8 +37,12 @@ var status_label: Label
 var shadow_label: Label
 var venom_label: Label
 var passive_label: Label
-var gear_labels: Dictionary = {}
-var gear_panels: Dictionary = {}
+var gear_labels: Array[Label] = []
+var gear_titles: Array[Label] = []
+var gear_panels: Array[Panel] = []
+var hero_label: Label
+var class_label: Label
+var bindings_label: Label
 var overlay: Panel
 var overlay_title: Label
 var overlay_copy: Label
@@ -74,12 +80,14 @@ func new_run() -> void:
 	get_tree().paused = false
 	for child in actors.get_children():
 		child.set_physics_process(false)
+		child.hide()
 		if child.is_in_group("enemies"):
 			child.remove_from_group("enemies")
 		if child.is_in_group("player"):
 			child.remove_from_group("player")
 		child.queue_free()
 	player = Player.new()
+	player.hero_id = selected_hero
 	player.position = SPAWN
 	actors.add_child(player)
 	player.died.connect(on_player_died)
@@ -92,12 +100,13 @@ func new_run() -> void:
 	last_reward = ""
 	notice_left = 0.0
 	floats.clear()
-	rewards.assign(T.SLOTS)
+	rewards.assign(Heroes.slots(selected_hero))
 	for i in range(rewards.size() - 1, 0, -1):
 		var j := rng.randi_range(0, i)
 		var slot := rewards[i]
 		rewards[i] = rewards[j]
 		rewards[j] = slot
+	configure_hero_hud()
 	show_overlay("ENTER THE VEIL", "Test Visreal in five short fights. Defeat each guardian to earn one unique gear piece.\n\nWASD moves. Hold arrows to slash. Q dashes toward your aim; E coats your blades.", "Begin combat  [Enter]", "Reset run  [R]")
 	update_hud()
 
@@ -220,7 +229,10 @@ func toggle_pause() -> void:
 		return
 	get_tree().paused = not get_tree().paused
 	if get_tree().paused:
-		show_overlay("PAUSED", "WASD  /  Move\nArrow keys  /  Aim and repeat melee attacks\nQ  /  Shadowstep       E  /  Venom Blades\n\nYour last arrow direction is remembered for Shadowstep.", "Resume  [Esc / Enter]", "New run  [R]")
+		var instructions := "WASD moves. Hold the arrow keys to aim and repeat %s." % Heroes.ATTACKS[selected_hero]
+		if selected_hero == "visreal":
+			instructions += "\n\nQ uses Shadowstep in your last aim direction. E coats your swords with poison."
+		show_overlay("PAUSED", instructions, "Resume  [Esc / Enter]", "New run  [R]")
 	else:
 		overlay.hide()
 
@@ -292,8 +304,8 @@ func create_ui() -> void:
 	enemy_label = label(ui, "", Rect2(690, 108, 265, 24), 14, MUTED)
 	enemy_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	panel(ui, Rect2(980, 160, 264, 612), Color("141822"), Color("373141"))
-	label(ui, "VISREAL", Rect2(1000, 178, 230, 30), 24, INK)
-	label(ui, "Shadow & poison rogue", Rect2(1000, 214, 230, 25), 14, MUTED)
+	hero_label = label(ui, "", Rect2(1000, 178, 230, 30), 24, INK)
+	class_label = label(ui, "", Rect2(1000, 214, 230, 25), 14, MUTED)
 	health_bar = ProgressBar.new()
 	health_bar.position = Vector2(1000, 252)
 	health_bar.size = Vector2(224, 14)
@@ -310,14 +322,12 @@ func create_ui() -> void:
 	status_label = label(ui, "", Rect2(1000, 314, 224, 38), 13, GOLD)
 	label(ui, "EQUIPMENT  /  BOSS REWARDS", Rect2(1000, 356, 230, 24), 12, MUTED)
 	for i in T.SLOTS.size():
-		var slot: String = T.SLOTS[i]
 		var card := panel(ui, Rect2(996, 391 + i * 66, 232, 58), Color("1b1e29"), Color("383344"))
 		card.mouse_filter = Control.MOUSE_FILTER_PASS
-		card.tooltip_text = T.ITEM_NAMES[slot] + "\n" + T.ITEM_EFFECTS[slot]
-		gear_panels[slot] = card
-		label(card, slot.to_upper(), Rect2(10, 5, 210, 20), 12, GOLD)
+		gear_panels.append(card)
+		gear_titles.append(label(card, "", Rect2(10, 5, 210, 20), 12, GOLD))
 		var description := label(card, "", Rect2(10, 27, 214, 22), 12, MUTED)
-		gear_labels[slot] = description
+		gear_labels.append(description)
 	label(ui, "One unique drop per guardian", Rect2(1000, 733, 230, 24), 13, MUTED)
 	notice = label(ui, "", Rect2(54, 775, 1180, 26), 14, GOLD)
 	var shadow_card := panel(ui, Rect2(36, 811, 360, 57), Color("201d30"), Color("5b466f"))
@@ -326,7 +336,7 @@ func create_ui() -> void:
 	venom_label = label(poison_card, "", Rect2(14, 7, 336, 44), 15, INK)
 	var passive_card := panel(ui, Rect2(780, 811, 464, 57), Color("241e2c"), Color("584051"))
 	passive_label = label(passive_card, "NIGHTSHADE  /  Passive\nEmpowered strikes punish poisoned enemies", Rect2(14, 7, 438, 44), 14, INK)
-	label(ui, "WASD move   ·   Hold arrows to aim + slash   ·   Q Shadowstep   ·   E Venom Blades   ·   R restart", Rect2(38, 876, 1205, 23), 13, MUTED)
+	bindings_label = label(ui, "", Rect2(38, 876, 1205, 23), 13, MUTED)
 	overlay = panel(ui, Rect2(200, 320, 604, 340), Color(0.065, 0.07, 0.105, 0.97), Color("8a7060"))
 	overlay.mouse_filter = Control.MOUSE_FILTER_STOP
 	overlay_title = label(overlay, "", Rect2(26, 24, 552, 42), 28, GOLD)
@@ -334,6 +344,23 @@ func create_ui() -> void:
 	overlay_copy.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	overlay_button = button(overlay, "", Rect2(26, 267, 326, 46), primary_action)
 	secondary_button = button(overlay, "", Rect2(366, 267, 212, 46), new_run)
+
+func configure_hero_hud() -> void:
+	hero_label.text = selected_hero.to_upper()
+	class_label.text = Heroes.ROLES[selected_hero]
+	var slots := Heroes.slots(selected_hero)
+	for i in slots.size():
+		var slot := slots[i]
+		gear_titles[i].text = slot.to_upper()
+		gear_panels[i].tooltip_text = Heroes.item_name(selected_hero, slot) + "\n" + Heroes.item_effect(selected_hero, slot)
+	bindings_label.text = "WASD move   ·   Hold arrows to attack   ·   Esc pause   ·   R restart"
+	if selected_hero == "visreal":
+		bindings_label.text += "   ·   Q Shadowstep   ·   E Venom Blades"
+		passive_label.text = "NIGHTSHADE  /  Passive\nEmpowered strikes punish poisoned enemies"
+	else:
+		shadow_label.text = Heroes.ATTACKS[selected_hero].to_upper() + "\nHold arrow keys to strike"
+		venom_label.text = "MOVEMENT\nUse WASD while aiming with the arrows"
+		passive_label.text = "GUARDIAN REWARDS\nEach equipped piece strengthens your swipe"
 
 func update_hud() -> void:
 	if not is_instance_valid(player):
@@ -345,17 +372,21 @@ func update_hud() -> void:
 	status_label.text = "%d / 5 gear pieces equipped" % player.gear.size()
 	if player.empower_left > 0.0:
 		status_label.text += "\nShadow strike ready"
-	for slot: String in T.SLOTS:
+	var slots := Heroes.slots(selected_hero)
+	for i in slots.size():
+		var slot := slots[i]
 		var earned: bool = slot in player.gear
-		gear_labels[slot].text = T.ITEM_NAMES[slot] if earned else ("Basic blades" if slot == "swords" else "Awaiting guardian reward")
-		gear_labels[slot].add_theme_color_override("font_color", Color("bde398") if earned else MUTED)
-		var style: StyleBoxFlat = gear_panels[slot].get_theme_stylebox("panel")
+		gear_labels[i].text = Heroes.item_name(selected_hero, slot) if earned else ("Basic blades" if slot == "swords" else "Awaiting guardian reward")
+		gear_labels[i].add_theme_color_override("font_color", Color("bde398") if earned else MUTED)
+		var style: StyleBoxFlat = gear_panels[i].get_theme_stylebox("panel")
 		style.border_color = Color("688159") if earned else Color("383344")
+	notice.visible = notice_left > 0.0
+	if selected_hero != "visreal":
+		return
 	shadow_label.text = "Q  SHADOWSTEP  /  " + ("READY" if player.shadow_cooldown <= 0.0 else "%.1fs" % player.shadow_cooldown)
 	shadow_label.text += "\nDash toward aim; empower the next slash"
 	venom_label.text = "E  VENOM BLADES  /  " + ("READY" if player.venom_cooldown <= 0.0 else "%.1fs" % player.venom_cooldown)
 	venom_label.text += "\n" + ("Poison coating active  /  %.1fs" % player.venom_left if player.venom_left > 0.0 else "Coat swords to poison enemies on hit")
-	notice.visible = notice_left > 0.0
 
 func _draw() -> void:
 	draw_rect(Rect2(0, 0, 1280, 900), Color("0c1019"))
